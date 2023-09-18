@@ -3,7 +3,9 @@
 @import '__global';
 
 .header {
-	margin-top: 53px;
+	padding-top: 53px;
+	z-index: 101;
+	background-color: white;
 
 	&__inner {
 		display: flex;
@@ -13,10 +15,76 @@
 
 	&__city {
 		margin-left: 40px;
+		display: flex;
+		align-items: center;
+		gap: 5px;
 		&-text {
 			@extend %desc-font;
 		}
 	}
+
+	.choices {
+		&::after {
+			display: none;
+		}
+
+		&__inner {
+			min-height: auto;
+			padding: 0;
+			border-radius: 0;
+			border: none;
+			border-bottom: 1px dashed $black;
+			background-color: transparent;
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		&__list {
+			min-width: auto;
+			& .choices__item--selectable.is-highlighted {
+				background: $gray;
+			}
+		}
+
+		&__list--single {
+			padding: 0;
+		}
+	}
+
+	.choices[data-type*='select-one'] .choices__inner {
+		padding: 0;
+	}
+
+	.choices__list--dropdown .choices__item,
+	.choices__list[aria-expanded] .choices__item {
+		color: $dark-gray;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	.choices__list--dropdown .choices__item--selectable.is-highlighted,
+	.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+		background-color: $light-gray;
+		color: $black;
+	}
+
+	.choices__list--dropdown,
+	.choices__list[aria-expanded] {
+		word-break: keep-all;
+		width: max-content;
+		border: none;
+		border-top: 1px solid $black;
+		box-shadow: 0px 4px 8px 0px rgba(67, 51, 48, 0.3);
+	}
+
+	.choices__list--dropdown .choices__item--selectable,
+	.choices__list[aria-expanded] .choices__item--selectable {
+		padding: 10px;
+	}
+
 	&__input {
 		position: absolute;
 		right: 246px;
@@ -213,29 +281,31 @@
 		position: relative;
 	}
 
-	&__title {
-		@extend %title-font;
+	&__tabs {
+		display: flex;
+		border-bottom: 2px solid $gray;
 		margin-bottom: 45px;
-	}
-
-	&__slide {
-		&-gray {
-			background: $gray;
-			width: 100%;
-			height: 2px;
-			position: absolute;
-			left: 0;
-			bottom: calc(100% - 47px);
-			transition: left 0.3s ease-out;
+		&-item {
+			margin-bottom: -2px;
+			padding-right: 210px;
+			&:last-child {
+				width: 100%;
+			}
+			&.active {
+				border-bottom: 2px solid $yellow;
+			}
 		}
-		&-yellow {
-			background: $yellow;
-			width: 370px;
-			height: 2px;
-			position: absolute;
-			left: 0;
-			bottom: calc(100% - 47px);
-			transition: left 0.3s ease-out;
+
+		&-link {
+			@extend %title-font;
+			cursor: pointer;
+		}
+
+		&-panel {
+			display: none;
+			&.active {
+				display: block;
+			}
 		}
 	}
 

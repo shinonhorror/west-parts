@@ -21,7 +21,12 @@
 							><img src="images/logo_black.svg" alt="logo"
 						/></a>
 						<div class="header__city">
-							<p class="header__city-text">Ваш город Санкт-Петербург</p>
+							<p class="header__city-text">Ваш город</p>
+							<select name="" id="" class="header__city-select">
+								<option value="Санкт-Петербург">Санкт-Петербург</option>
+								<option value="Москва">Москва</option>
+								<option value="Краснодар">Краснодар</option>
+							</select>
 						</div>
 						<input
 							type="text"
@@ -78,7 +83,7 @@
 										alt=""
 									/>
 									<div class="top__slider-info">
-										<h2 class="top__slider-title">Запчасти в кредит</h2>
+										<h2 class="top__slider-title">Запчасти в кредит 1</h2>
 										<p class="top__slider-text">
 											Познакомьтесь с нашими условиями покупки в кредит
 										</p>
@@ -92,7 +97,21 @@
 										alt=""
 									/>
 									<div class="top__slider-info">
-										<h2 class="top__slider-title">Запчасти в кредит</h2>
+										<h2 class="top__slider-title">Запчасти в кредит 2</h2>
+										<p class="top__slider-text">
+											Познакомьтесь с нашими условиями покупки в кредит
+										</p>
+										<a class="top__slider-link" href="#">подробнее</a>
+									</div>
+								</div>
+								<div class="top__slider-item">
+									<img
+										class="top__slider-img"
+										src="images/slider-1.png"
+										alt=""
+									/>
+									<div class="top__slider-info">
+										<h2 class="top__slider-title">Запчасти в кредит 3</h2>
 										<p class="top__slider-text">
 											Познакомьтесь с нашими условиями покупки в кредит
 										</p>
@@ -173,78 +192,92 @@
 				<section class="search">
 					<div class="container">
 						<div class="search__inner">
-							<h2 class="search__title">Категории</h2>
-							<div class="search__slide-gray"></div>
-							<div class="search__slide-yellow"></div>
-							<div class="search__category">
-								<div class="search__category-item">
-									<p class="search__category-text">Шины</p>
-									<img
-										src="images/categories/tires.svg"
-										alt="tires"
-										class="search__category-image"
-									/>
+							<ul class="search__tabs">
+								<li class="search__tabs-item active">
+									<a href="" class="search__tabs-link">Категории</a>
+								</li>
+								<li class="search__tabs-item">
+									<a href="" class="search__tabs-link">Поиск по марке</a>
+								</li>
+							</ul>
+
+							<div class="search__tabs-content">
+								<div class="search__tabs-panel active" data-index="0">
+									<div class="search__category">
+										<div class="search__category-item">
+											<p class="search__category-text">Шины</p>
+											<img
+												src="images/categories/tires.svg"
+												alt="tires"
+												class="search__category-image"
+											/>
+										</div>
+										<div class="search__category-item">
+											<p class="search__category-text">Диски</p>
+											<img
+												src="images/categories/disks.svg"
+												alt="disks"
+												class="search__category-image"
+											/>
+										</div>
+										<div class="search__category-item">
+											<p class="search__category-text">Свечи</p>
+											<img
+												src="images/categories/spark_plugs.svg"
+												alt="spark_plugs"
+												class="search__category-image"
+											/>
+										</div>
+										<div class="search__category-item">
+											<p class="search__category-text">Масла и автохимия</p>
+											<img
+												src="images/categories/oils.svg"
+												alt="oils"
+												class="search__category-image"
+											/>
+										</div>
+										<div class="search__category-item">
+											<p class="search__category-text">Фильтры</p>
+											<img
+												src="images/categories/filters.svg"
+												alt="filters"
+												class="search__category-image"
+											/>
+										</div>
+										<div class="search__category-item">
+											<p class="search__category-text">Электрика</p>
+											<img
+												src="images/categories/electric.svg"
+												alt="electric"
+												class="search__category-image"
+											/>
+										</div>
+										<div class="search__category-item">
+											<p class="search__category-text">Сцепление</p>
+											<img
+												src="images/categories/clutch.svg"
+												alt="clutch"
+												class="search__category-image"
+											/>
+										</div>
+										<div class="search__category-item">
+											<p class="search__category-text">Тормозная система</p>
+											<img
+												src="images/categories/brakes.svg"
+												alt="brakes"
+												class="search__category-image"
+											/>
+										</div>
+									</div>
 								</div>
-								<div class="search__category-item">
-									<p class="search__category-text">Диски</p>
-									<img
-										src="images/categories/disks.svg"
-										alt="disks"
-										class="search__category-image"
-									/>
-								</div>
-								<div class="search__category-item">
-									<p class="search__category-text">Свечи</p>
-									<img
-										src="images/categories/spark_plugs.svg"
-										alt="spark_plugs"
-										class="search__category-image"
-									/>
-								</div>
-								<div class="search__category-item">
-									<p class="search__category-text">Масла и автохимия</p>
-									<img
-										src="images/categories/oils.svg"
-										alt="oils"
-										class="search__category-image"
-									/>
-								</div>
-								<div class="search__category-item">
-									<p class="search__category-text">Фильтры</p>
-									<img
-										src="images/categories/filters.svg"
-										alt="filters"
-										class="search__category-image"
-									/>
-								</div>
-								<div class="search__category-item">
-									<p class="search__category-text">Электрика</p>
-									<img
-										src="images/categories/electric.svg"
-										alt="electric"
-										class="search__category-image"
-									/>
-								</div>
-								<div class="search__category-item">
-									<p class="search__category-text">Сцепление</p>
-									<img
-										src="images/categories/clutch.svg"
-										alt="clutch"
-										class="search__category-image"
-									/>
-								</div>
-								<div class="search__category-item">
-									<p class="search__category-text">Тормозная система</p>
-									<img
-										src="images/categories/brakes.svg"
-										alt="brakes"
-										class="search__category-image"
-									/>
+								<div class="search__tabs-panel" data-index="1">
+									Тут будут марки
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
+
 				<section class="brands">
 					<div class="container">
 						<div class="brands__inner">
@@ -473,6 +506,7 @@
 				</div>
 			</footer>
 		</div>
+		
 		<script
 			src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
 			type="text/javascript"

@@ -44,6 +44,7 @@ export function scripts() {
 		.src([
 			'node_modules/jquery/dist/jquery.slim.min.js',
 			'node_modules/slick-carousel/slick/slick.min.js',
+			'node_modules/choices.js/public/assets/scripts/choices.min.js',
 			'app/js/main.js',
 		])
 		.pipe(concat('main.min.js'))
@@ -57,6 +58,7 @@ export function styles() {
 		.src([
 			'node_modules/slick-carousel/slick/slick-theme.scss',
 			'node_modules/slick-carousel/slick/slick.scss',
+			'node_modules/choices.js/public/assets/styles/choices.min.css',
 			'app/scss/styles.scss',
 		])
 		.pipe(scss({ outputStyle: 'compressed' }))
