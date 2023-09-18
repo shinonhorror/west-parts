@@ -20,7 +20,7 @@ export function browsersync() {
 }
 
 export function cleanDist() {
-	return deleteAsync('dist');
+	return deleteAsync('docs');
 }
 
 export function images() {
@@ -36,7 +36,7 @@ export function images() {
 				}),
 			]),
 		)
-		.pipe(gulp.dest('dist/images'));
+		.pipe(gulp.dest('docs/images'));
 }
 
 export function scripts() {
@@ -78,7 +78,7 @@ export function build() {
 		.src(['app/css/style.min.css', 'app/js/main.min.js', 'app/*.html'], {
 			base: 'app',
 		})
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('docs'));
 }
 
 export function watching() {
