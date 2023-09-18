@@ -1,0 +1,27 @@
+{
+	"name": "west-parts",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.min.js",
+	"type": "module",
+	"scripts": {
+		"build": "gulp builder",
+		"dev": "gulp"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "2.29.3",
+		"del": "7.1.0",
+		"gulp": "4.0.2",
+		"gulp-autoprefixer": "8.0.0",
+		"gulp-concat": "2.6.1",
+		"gulp-imagemin": "7.1.0",
+		"gulp-sass": "5.1.0",
+		"gulp-terser": "2.1.0",
+		"gulp-uglify-es": "3.0.0",
+		"jquery": "3.7.1",
+		"sass": "1.67.0",
+		"slick-carousel": "1.8.1"
+	}
+}

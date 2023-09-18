@@ -1,0 +1,32 @@
+@import '__vars';
+
+body {
+	font-family: 'Jost', sans-serif;
+	color: $black;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.container {
+	max-width: 1470px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container-fluid {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.slick-track {
+	display: flex !important;
+}
+
+#map {
+	min-width: 700px;
+	height: 539px;
+}

@@ -1,0 +1,56 @@
+$yellow: #fbb81b;
+$yellow-gradient: radial-gradient(
+	199.94% 93.23% at 27.12% 38.25%,
+	#fff1d1 0%,
+	#fbb81b 100%
+);
+$black: #1a1a1a;
+$gray: #e7e1d5;
+$light-gray: #f8f5f0;
+$dark-gray: #86827a;
+$gray-gradient: radial-gradient(
+	199.94% 93.23% at 27.12% 38.25%,
+	#f8f5f0 0%,
+	#ada490 100%
+);
+
+%title-font {
+	font-size: 34px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 137.9%;
+}
+
+%title-min-font {
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 137.9%;
+}
+
+%desc-font {
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+%link-font {
+	font-size: 26px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+$num-of-tabs: 2;
+
+@mixin tabs {
+  @for $i from 1 through $num-of-tabs {
+    &:nth-of-type(#{$i}) {
+      &:checked {
+        ~ .slide {
+          left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
+        }
+      }
+    }
+  }
+}
