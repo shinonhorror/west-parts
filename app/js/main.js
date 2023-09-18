@@ -25,6 +25,7 @@ $(function () {
 		nextArrow:
 			'<button type="button" class="brands__slider-right"><img src="images/arrow-right-brand.svg"></button>',
 	});
+
 });
 
 const CitySearch = () => {
