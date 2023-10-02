@@ -1,0 +1,35 @@
+@import '__vars';
+@import '__reset';
+@import '__global';
+
+.maps {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+		margin-top: 100px;
+		margin-bottom: 156px;
+	}
+	&__info {
+		display: flex;
+		gap: 40px;
+		&-map {
+			width: 700px;
+			height: 506px;
+		}
+		&-title {
+      margin-bottom: 45px;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 137.9%;
+		}
+		&-address,
+		&-phone {
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 180%;
+		}
+	}
+}

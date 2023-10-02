@@ -42,8 +42,6 @@ export function images() {
 export function scripts() {
 	return gulp
 		.src([
-			'node_modules/jquery/dist/jquery.slim.min.js',
-			'node_modules/slick-carousel/slick/slick.min.js',
 			'node_modules/choices.js/public/assets/scripts/choices.min.js',
 			'app/js/main.js',
 		])
@@ -56,13 +54,10 @@ export function scripts() {
 export function styles() {
 	return gulp
 		.src([
-			'node_modules/slick-carousel/slick/slick-theme.scss',
-			'node_modules/slick-carousel/slick/slick.scss',
 			'node_modules/choices.js/public/assets/styles/choices.min.css',
-			'app/scss/styles.scss',
+			'app/scss/*.scss',
 		])
 		.pipe(scss({ outputStyle: 'compressed' }))
-		.pipe(concat('style.min.css'))
 		.pipe(
 			autoprefixer({
 				overrideBrowserslist: ['last 10 version'],
