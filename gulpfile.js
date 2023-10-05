@@ -70,9 +70,21 @@ export function styles() {
 
 export function build() {
 	return gulp
-		.src(['app/css/style.min.css', 'app/js/main.min.js', 'app/*.html'], {
-			base: 'app',
-		})
+		.src(
+			[
+				'app/css/account.css',
+				'app/css/choices.min.css',
+				'app/css/contacts.css',
+				'app/css/delievery.css',
+				'app/css/main.css',
+				'app/css/slick.css',
+				'app/js/main.min.js',
+				'app/*.html',
+			],
+			{
+				base: 'app',
+			},
+		)
 		.pipe(gulp.dest('docs'));
 }
 

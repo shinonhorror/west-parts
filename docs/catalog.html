@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>West parts</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.min.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<modal class="modal" id="modal">
+				<div class="modal-container">
+					<button class="modal__close"></button>
+					<ul class="modal__tabs">
+						<li class="modal__tabs-item active">
+							<a href="" class="modal__tabs-link">регистрация</a>
+						</li>
+						<li class="modal__tabs-item">
+							<a href="" class="modal__tabs-link">авторизация</a>
+						</li>
+					</ul>
+					<div class="modal__tabs-panel active" data-index="0">
+						<form class="modal__registration" action="submit">
+							<div class="modal__registration-radiobuttons">
+								<label class="modal__registration-label"
+									><input
+										class="modal__registration-radio"
+										type="radio"
+										checked
+										name="business"
+										data-index="0"
+									/>
+									<span class="modal__registration-fake">физическое лицо</span>
+								</label>
+
+								<label class="modal__registration-label"
+									><input
+										class="modal__registration-radio"
+										type="radio"
+										name="business"
+										data-index="1"
+									/><span class="modal__registration-fake"
+										>юридическое лицо</span
+									></label
+								>
+							</div>
+							<div class="modal__registration-panel active" data-index="0">
+								<div class="modal__registration-left">
+									<input
+										class="modal__registration-input"
+										type="text"
+										autocomplete="email"
+										placeholder="ФИО"
+										name="name"
+									/>
+									<input
+										class="modal__registration-input"
+										type="tel"
+										placeholder="телефон"
+										name="phone"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										autocomplete="email"
+										placeholder="Email"
+										name="email"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										placeholder="город"
+										name="city"
+									/>
+								</div>
+								<div class="modal__registration-right">
+									<textarea class="modal__registration-input" name="comment">
+комментарий</textarea
+									>
+								</div>
+							</div>
+							<div class="modal__registration-panel" data-index="1">
+								<div class="modal__registration-left">
+									<input
+										class="modal__registration-input"
+										type="text"
+										autocomplete="email"
+										placeholder="ФИО"
+										name="name"
+									/>
+									<input
+										class="modal__registration-input"
+										type="tel"
+										placeholder="телефон"
+										name="phone"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										autocomplete="email"
+										placeholder="Email"
+										name="email"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										placeholder="город"
+										name="city"
+									/>
+								</div>
+								<div class="modal__registration-right">
+									<input
+										class="modal__registration-input"
+										type="text"
+										placeholder="название компании"
+										name="company"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										placeholder="ИНН"
+										name="INN"
+									/>
+									<textarea class="modal__registration-input" name="comment">
+комментарий</textarea
+									>
+								</div>
+							</div>
+							<label class="modal__registration-label"
+								><input
+									class="modal__registration-radio"
+									type="checkbox"
+									name="subscription"
+									checked
+								/><span class="modal__registration-fake"
+									>подписаться на рассылку</span
+								></label
+							>
+							<button class="modal__registration-button" type="submit">
+								зарегистрироваться
+							</button>
+						</form>
+					</div>
+					<div class="modal__tabs-panel" data-index="1">
+						<form class="modal__authorization" action="submit">
+							<input
+								class="modal__authorization-input"
+								type="text"
+								autocomplete="email"
+								placeholder="Email"
+							/>
+							<input
+								class="modal__authorization-input"
+								type="password"
+								placeholder="пароль"
+							/>
+							<button class="modal__authorization-button" type="submit">
+								войти
+							</button>
+						</form>
+						<a href="#" class="modal__authorization-reset"
+							>восстановление пароля</a
+						>
+					</div>
+				</div>
+			</modal>
+			
+			<header class="header">
+				<div class="container">
+					<div class="header__inner">
+						<a href="#" class="logo"
+							><img src="images/logo_black.svg" alt="logo"
+						/></a>
+						<div class="header__city">
+							<p class="header__city-text">Ваш город</p>
+							<select name="" id="" class="header__city-select">
+								<option value="Санкт-Петербург">Санкт-Петербург</option>
+								<option value="Москва">Москва</option>
+								<option value="Краснодар">Краснодар</option>
+							</select>
+						</div>
+						<input
+							type="text"
+							class="header__input"
+							placeholder="поиск по артикулу"
+						/>
+						<div class="header__buttons">
+							<a href="#" class="header__buttons-cart">
+								<img src="images/cart.svg" alt="cart" />
+							</a>
+							<a href="#" class="header__buttons-account">
+								<img src="images/account.svg" alt="account" />
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="navigation">
+					<div class="container">
+						<div class="navigation__inner">
+							<nav class="menu">
+								<ul class="menu__list">
+									<li class="menu__list-item">
+										<a href="#" class="menu__list-link">купить</a>
+									</li>
+									<li class="menu__list-item">
+										<a href="#" class="menu__list-link">о компании</a>
+									</li>
+									<li class="menu__list-item">
+										<a href="#" class="menu__list-link">доставка и оплата</a>
+									</li>
+									<li class="menu__list-item">
+										<a href="#" class="menu__list-link">контакты</a>
+									</li>
+									<li class="menu__list-item">
+										<a href="#" class="menu__list-link">+7 (921) 310-38-10</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__inner">
+						<div class="footer__logo">
+							<a href="#" class="footer__logo-img"
+								><img src="images/logo_black.svg" alt="logo"
+							/></a>
+							<p class="footer__logo-copyright">© 2023 Автозапчасти</p>
+						</div>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">о компании</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">каталог</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">доставка и оплата</a>
+								</li>
+							</ul>
+						</nav>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">новости</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">бренды</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">+7 (921) 310-38-10 </a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">office@w-part.ru</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script type="text/javascript" src="js/main.min.js"></script>
+	</body>
+</html>

@@ -10,14 +10,173 @@
 			href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="css/style.min.css" />
+		<link rel="stylesheet" href="css/slick.css" />
+		<link rel="stylesheet" href="css/choices.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
 		<div class="wrapper">
+			<modal class="modal" id="modal">
+				<div class="modal-container">
+					<button class="modal__close"></button>
+					<ul class="modal__tabs">
+						<li class="modal__tabs-item active">
+							<a href="" class="modal__tabs-link">регистрация</a>
+						</li>
+						<li class="modal__tabs-item">
+							<a href="" class="modal__tabs-link">авторизация</a>
+						</li>
+					</ul>
+					<div class="modal__tabs-panel active" data-index="0">
+						<form class="modal__registration" action="submit">
+							<div class="modal__registration-radiobuttons">
+								<label class="modal__registration-label"
+									><input
+										class="modal__registration-radio"
+										type="radio"
+										checked
+										name="business"
+										data-index="0"
+									/>
+									<span class="modal__registration-fake">физическое лицо</span>
+								</label>
+
+								<label class="modal__registration-label"
+									><input
+										class="modal__registration-radio"
+										type="radio"
+										name="business"
+										data-index="1"
+									/><span class="modal__registration-fake"
+										>юридическое лицо</span
+									></label
+								>
+							</div>
+							<div class="modal__registration-panel active" data-index="0">
+								<div class="modal__registration-left">
+									<input
+										class="modal__registration-input"
+										type="text"
+										autocomplete="email"
+										placeholder="ФИО"
+										name="name"
+									/>
+									<input
+										class="modal__registration-input"
+										type="tel"
+										placeholder="телефон"
+										name="phone"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										autocomplete="email"
+										placeholder="Email"
+										name="email"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										placeholder="город"
+										name="city"
+									/>
+								</div>
+								<div class="modal__registration-right">
+									<textarea class="modal__registration-input" name="comment">
+комментарий</textarea
+									>
+								</div>
+							</div>
+							<div class="modal__registration-panel" data-index="1">
+								<div class="modal__registration-left">
+									<input
+										class="modal__registration-input"
+										type="text"
+										autocomplete="email"
+										placeholder="ФИО"
+										name="name"
+									/>
+									<input
+										class="modal__registration-input"
+										type="tel"
+										placeholder="телефон"
+										name="phone"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										autocomplete="email"
+										placeholder="Email"
+										name="email"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										placeholder="город"
+										name="city"
+									/>
+								</div>
+								<div class="modal__registration-right">
+									<input
+										class="modal__registration-input"
+										type="text"
+										placeholder="название компании"
+										name="company"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										placeholder="ИНН"
+										name="INN"
+									/>
+									<textarea class="modal__registration-input" name="comment">
+комментарий</textarea
+									>
+								</div>
+							</div>
+							<label class="modal__registration-label"
+								><input
+									class="modal__registration-radio"
+									type="checkbox"
+									name="subscription"
+									checked
+								/><span class="modal__registration-fake"
+									>подписаться на рассылку</span
+								></label
+							>
+							<button class="modal__registration-button" type="submit">
+								зарегистрироваться
+							</button>
+						</form>
+					</div>
+					<div class="modal__tabs-panel" data-index="1">
+						<form class="modal__authorization" action="submit">
+							<input
+								class="modal__authorization-input"
+								type="text"
+								autocomplete="email"
+								placeholder="Email"
+							/>
+							<input
+								class="modal__authorization-input"
+								type="password"
+								placeholder="пароль"
+							/>
+							<button class="modal__authorization-button" type="submit">
+								войти
+							</button>
+						</form>
+						<a href="#" class="modal__authorization-reset"
+							>восстановление пароля</a
+						>
+					</div>
+				</div>
+			</modal>
+
 			<header class="header">
 				<div class="container">
 					<div class="header__inner">
-						<a href="#" class="logo"
+						<a href="index.html" class="logo"
 							><img src="images/logo_black.svg" alt="logo"
 						/></a>
 						<div class="header__city">
@@ -56,10 +215,12 @@
 										<a href="#" class="menu__list-link">о компании</a>
 									</li>
 									<li class="menu__list-item">
-										<a href="#" class="menu__list-link">доставка и оплата</a>
+										<a href="delivery.html" class="menu__list-link"
+											>доставка и оплата</a
+										>
 									</li>
 									<li class="menu__list-item">
-										<a href="#" class="menu__list-link">контакты</a>
+										<a href="contacts.html" class="menu__list-link">контакты</a>
 									</li>
 									<li class="menu__list-item">
 										<a href="#" class="menu__list-link">+7 (921) 310-38-10</a>
@@ -411,7 +572,7 @@
 									</div>
 								</div>
 							</div>
-							<a href="#" class="news__link">посмотреть все</a>
+							<a href="news.html" class="news__link">посмотреть все</a>
 						</div>
 					</div>
 				</section>
@@ -506,11 +667,23 @@
 				</div>
 			</footer>
 		</div>
-		
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"
+			type="text/javascript"
+		></script>
 		<script
 			src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
 			type="text/javascript"
 		></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+
 		<script type="text/javascript" src="js/main.min.js"></script>
+		<script>
+			
+		</script>
 	</body>
 </html>
