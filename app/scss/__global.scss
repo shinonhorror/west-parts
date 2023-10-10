@@ -387,19 +387,30 @@ body {
 				background-size: 100% 100%;
 			}
 		}
-
+		&-fields {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 42px;
+			margin-bottom: 50px;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+		}
 		&-panel {
 			display: none;
+			height: 100%;
+
+			textarea {
+				height: 100%;
+				width: 452px;
+				resize: none;
+			}
 
 			&.active {
 				display: flex;
-				flex-wrap: wrap;
-				gap: 42px;
-				margin-bottom: 50px;
-				font-size: 20px;
-				font-style: normal;
-				font-weight: 400;
-				line-height: 130%;
+				flex-direction: column;
+				gap: 48px;
 			}
 		}
 
@@ -414,11 +425,6 @@ body {
 			display: flex;
 			flex-direction: column;
 			gap: 48px;
-			textarea {
-				height: 100%;
-				width: 452px;
-				resize: none;
-			}
 		}
 
 		&-input {
