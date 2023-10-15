@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>West parts</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/acc.css" />
+		<link rel="stylesheet" href="css/choices.min.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<modal class="modal" id="modal">
+				<div class="modal-container">
+					<button class="modal__close"></button>
+					<div class="modal__product">
+						<div class="modal__product-images">
+							<img
+								class="modal__product-main"
+								src="images/slider-1.png"
+								alt="main_image"
+							/>
+							<div class="modal__product-other">
+								<img
+									class="modal__product-other_img"
+									src="images/slider-1.png"
+									alt=""
+								/>
+								<img
+									class="modal__product-other_img"
+									src="images/slider-1.png"
+									alt=""
+								/>
+								<img
+									class="modal__product-other_img"
+									src="images/slider-1.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="modal__product-info">
+							<h2 class="modal__product-title">
+								Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач, автобус)
+							</h2>
+							<div class="modal__product-desc">
+								<div class="modal__product-col">
+									<div class="modal__product-item">
+										<p class="modal__product-name">артикул:</p>
+										<p class="modal__product-name">154685431</p>
+									</div>
+									<div class="modal__product-item">
+										<p class="modal__product-name">бренд:</p>
+										<p class="modal__product-name">STELLOX</p>
+									</div>
+									<div class="modal__product-item">
+										<p class="modal__product-name">кол-во на слкде:</p>
+										<p class="modal__product-name">58</p>
+									</div>
+								</div>
+								<div class="modal__product-col">
+									<div class="modal__product-item">
+										<p class="modal__product-name">склад:</p>
+										<p class="modal__product-name">СПб Московское ш.</p>
+									</div>
+									<div class="modal__product-item">
+										<p class="modal__product-name">дата поставки:</p>
+										<p class="modal__product-name">28.09.2023</p>
+									</div>
+									<div class="modal__product-item">
+										<p class="modal__product-name">возврат:</p>
+										<p class="modal__product-name">14 дней</p>
+									</div>
+								</div>
+							</div>
+							<p class="modal__product-price">4555,80 руб.</p>
+							<button class="modal__product-add">в корзину</button>
+						</div>
+					</div>
+
+					<div class="modal__characteristic">
+						<div class="modal__characteristic-col">
+							<div class="modal__characteristic-item">
+								<p class="modal__characteristic-name">тип диска:</p>
+								<p class="modal__characteristic-desc">штампованный</p>
+							</div>
+							<div class="modal__characteristic-item">
+								<p class="modal__characteristic-name">вылет, ЕТ мм:</p>
+								<p class="modal__characteristic-desc">175</p>
+							</div>
+							<div class="modal__characteristic-item">
+								<p class="modal__characteristic-name">ширина диска:</p>
+								<p class="modal__characteristic-desc">9</p>
+							</div>
+							<div class="modal__characteristic-item">
+								<p class="modal__characteristic-name">диаметр диска:</p>
+								<p class="modal__characteristic-desc">22,5</p>
+							</div>
+						</div>
+						<div class="modal__characteristic-col">
+							<div class="modal__characteristic-item">
+								<p class="modal__characteristic-name">гарантия:</p>
+								<p class="modal__characteristic-desc">1 год</p>
+							</div>
+							<div class="modal__characteristic-item">
+								<p class="modal__characteristic-name">вес в упаковке</p>
+								<p class="modal__characteristic-desc">175</p>
+							</div>
+							<div class="modal__characteristic-item">
+								<p class="modal__characteristic-name">количество в упаковке</p>
+								<p class="modal__characteristic-desc">1</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</modal>
+
+			<header class="header">
+				<div class="container">
+					<div class="header__inner">
+						<a href="#" class="logo"
+							><img src="images/logo_black.svg" alt="logo"
+						/></a>
+						<div class="header__city">
+							<p class="header__city-text">Ваш город</p>
+							<select name="" id="" class="header__city-select">
+								<option value="Санкт-Петербург">Санкт-Петербург</option>
+								<option value="Москва">Москва</option>
+								<option value="Краснодар">Краснодар</option>
+							</select>
+						</div>
+						<div class="header__buttons">
+							<div class="header__info">
+								<p class="header__info-company">
+									ООО “Компания”, 196084, г. Санкт-Петербург, Набережная
+									Обводного канала, Д.92 ЛИТ.А, офис 215
+								</p>
+								<p class="header__info-credit">
+									<span class="header__info-highlight">Лимит кредита:</span> 200
+									000 руб. /
+									<span class="header__info-highlight">Остаток кредита:</span>
+									200 000 руб.
+								</p>
+								<p class="header__info-credit">
+									<span class="header__info-highlight">Отсрочка:</span> 5 дней
+								</p>
+							</div>
+							<a href="#" class="header__buttons-cart">
+								<img src="images/cart.svg" alt="cart" />
+							</a>
+							<a href="#" class="header__buttons-account">
+								<img src="images/account.svg" alt="account" />
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="navigation">
+					<div class="container">
+						<div class="navigation__inner">
+							<nav class="accountmenu">
+								<ul class="accountmenu__list">
+									<li class="accountmenu__list-item">
+										<a
+											href="acc-catalog.html"
+											class="accountmenu__list-link active"
+											><img
+												src="images/profile/catalogs.svg"
+												alt="catalogs-active"
+											/>
+											интернет-магазин</a
+										>
+									</li>
+									<li class="accountmenu__list-item">
+										<a href="acc-orders.html" class="accountmenu__list-link"
+											><img
+												src="images/profile/orders.svg"
+												alt="catalogs-active"
+											/>
+											заказы и возвраты</a
+										>
+									</li>
+									<li class="accountmenu__list-item">
+										<a href="catalog.html" class="accountmenu__list-link"
+											><img
+												src="images/profile/finance.svg"
+												alt="catalogs-active"
+											/>
+											финансы</a
+										>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<main class="main">
+				<section class="search">
+					<div class="container">
+						<div class="search__inner">
+							<div class="search__main">
+								<label class="search__input-wrapper">
+									<img
+										class="search__input-icon"
+										src="images/search.svg"
+										alt=""
+									/>
+									<input
+										class="search__input-input"
+										type="text"
+										placeholder="введите артикул"
+									/>
+								</label>
+								<button class="search__main-button">найти</button>
+								<div class="search__main-contacts">
+									<img src="images/profile/whatsapp.svg" alt="whatsapp" />
+									<div class="search__main-info">
+										<p class="search__main-desc">
+											Ваш менеджер — Василий Иванов
+										</p>
+										<p class="search__main-desc">
+											+7 (916) 123-45-67, vasilyi_ivanov@email.com
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="search__buttons">
+								<button class="search__buttons-item active">по артикулу</button>
+								<button class="search__buttons-item">по наименованию</button>
+								<button class="search__buttons-item">по VIN</button>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="categories">
+					<div class="container">
+						<div class="categories__inner">
+							<ul class="categories__list">
+								<li class="categories__list-hit">
+									<img
+										class="categories__list-hit_img"
+										src="images/profile/categories/hit.svg"
+										alt=""
+									/>
+									<p class="categories__list-hit_desc">хит сезона</p>
+								</li>
+								<li class="categories__list-item active">
+									<img
+										class="categories__list-img"
+										src="images/profile/categories/scep.svg"
+										alt=""
+									/>
+									<p class="categories__list-desc" style="width: 79px">
+										комплекты сцепления
+									</p>
+								</li>
+								<li class="categories__list-item">
+									<img
+										class="categories__list-img"
+										src="images/profile/categories/evergo.svg"
+										alt=""
+									/>
+									<p class="categories__list-desc" style="width: 144px">
+										энергоаккумуляторы и тормозные камеры
+									</p>
+								</li>
+								<li class="categories__list-item">
+									<img
+										class="categories__list-img"
+										src="images/profile/categories/tuag.svg"
+										alt=""
+									/>
+									<p class="categories__list-desc" style="width: 59px">
+										тяги рулевые
+									</p>
+								</li>
+								<li class="categories__list-item">
+									<img
+										class="categories__list-img"
+										src="images/profile/categories/gbc.svg"
+										alt=""
+									/>
+									<p class="categories__list-desc" style="width: 180px">
+										прокладки ГБЦ двигателя и их комплекты
+									</p>
+								</li>
+								<li class="categories__list-item">
+									<img
+										class="categories__list-img"
+										src="images/profile/categories/ressors.svg"
+										alt=""
+									/>
+									<p class="categories__list-desc" style="width: 110px">
+										рессоры пневматические
+									</p>
+								</li>
+								<li class="categories__list-item">
+									<img
+										class="categories__list-img"
+										src="images/profile/categories/jcb.svg"
+										alt=""
+									/>
+									<p class="categories__list-desc" style="width: 133px">
+										запчасти на спецтехнику JCB
+									</p>
+								</li>
+								<li class="categories__list-item">
+									<img
+										class="categories__list-img"
+										src="images/profile/categories/supports.svg"
+										alt=""
+									/>
+									<p class="categories__list-desc" style="width: 153px">
+										ремонтные комплекты суппортов
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="breadcrumbs">
+					<div class="container">
+						<div class="breadcrumbs__inner">
+							<a class="breadcrumbs__link">Интернет-магазин</a>
+							<p class="breadcrumbs__divider">></p>
+							<a class="breadcrumbs__link">диски</a>
+							<p class="breadcrumbs__divider">></p>
+							<a class="breadcrumbs__link">диск для тягачей и автобусов</a>
+						</div>
+					</div>
+				</section>
+
+				<section class="catalog">
+					<div class="container">
+						<div class="catalog__inner">
+							<div class="catalog__filter">
+								<div class="catalog__filter-title">фильтры</div>
+								<div class="catalog__filter-sort">
+									<div class="catalog__filter-sort_item active">
+										<img src="images/profile/filter/lower.svg" alt="lower" />
+										<p>дешевле</p>
+									</div>
+									<div class="catalog__filter-sort_item">
+										<img src="images/profile/filter/higher.svg" alt="higher" />
+										<p>дороже</p>
+									</div>
+								</div>
+								<div class="catalog__filter-toggle">
+									<button
+										class="catalog__filter-toggle_button"
+										aria-expanded="true"
+									>
+										цена
+										<img
+											src="images/profile/toggle.svg"
+											alt=""
+											focusable="false"
+										/>
+									</button>
+									<div class="catalog__filter-toggle_content">
+										<div class="catalog__filter-price">
+											<p class="catalog__filter-price_desc">от</p>
+											<input type="text" class="catalog__filter-price_input" />
+											<p class="catalog__filter-price_desc">до</p>
+											<input type="text" class="catalog__filter-price_input" />
+										</div>
+									</div>
+								</div>
+								<div class="catalog__filter-toggle">
+									<button
+										class="catalog__filter-toggle_button"
+										aria-expanded="true"
+									>
+										срок поставки
+										<img
+											src="images/profile/toggle.svg"
+											alt=""
+											focusable="false"
+										/>
+									</button>
+									<div class="catalog__filter-toggle_content">
+										<div class="catalog__filter-estimate">
+											<div class="catalog__filter-ranger">
+												<div class="catalog__filter-value"></div>
+												<input
+													class="catalog__filter-input"
+													type="range"
+													value="50"
+													min="1"
+													max="50"
+													data-condition="дней"
+													step="1"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__filter-toggle">
+									<button
+										class="catalog__filter-toggle_button"
+										aria-expanded="true"
+									>
+										вероятность поставки
+										<img
+											src="images/profile/toggle.svg"
+											alt=""
+											focusable="false"
+										/>
+									</button>
+									<div class="catalog__filter-toggle_content">
+										<div class="catalog__filter-probability">
+											<div class="catalog__filter-ranger">
+												<div class="catalog__filter-value"></div>
+												<input
+													class="catalog__filter-input"
+													type="range"
+													value="100"
+													data-condition="%"
+													min="0"
+													max="100"
+													step="1"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__filter-toggle">
+									<button
+										class="catalog__filter-toggle_button"
+										aria-expanded="true"
+									>
+										пункт выдачи
+										<img
+											src="images/profile/toggle.svg"
+											alt=""
+											focusable="false"
+										/>
+									</button>
+									<div class="catalog__filter-toggle_content">
+										<div class="catalog__filter-give">
+											<label class="catalog__filter-give_label"
+												><input
+													class="catalog__filter-give_radio"
+													type="checkbox"
+													name="give"
+													data-index="0"
+												/>
+												<span class="catalog__filter-give_fake">не выбран</span>
+											</label>
+											<label class="catalog__filter-give_label"
+												><input
+													class="catalog__filter-give_radio"
+													type="checkbox"
+													name="give"
+													data-index="1"
+												/>
+												<span class="catalog__filter-give_fake">не выбран</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__filter-toggle">
+									<button
+										class="catalog__filter-toggle_button"
+										aria-expanded="true"
+									>
+										склад
+										<img
+											src="images/profile/toggle.svg"
+											alt=""
+											focusable="false"
+										/>
+									</button>
+									<div class="catalog__filter-toggle_content">
+										<div class="catalog__filter-storage">
+											<label class="catalog__filter-storage_label"
+												><input
+													class="catalog__filter-storage_radio"
+													type="checkbox"
+													name="storage"
+													data-index="0"
+												/>
+												<span class="catalog__filter-storage_fake"
+													>СПб Московское ш.</span
+												>
+											</label>
+											<label class="catalog__filter-storage_label"
+												><input
+													class="catalog__filter-storage_radio"
+													type="checkbox"
+													name="storage"
+													data-index="1"
+												/>
+												<span class="catalog__filter-storage_fake"
+													>Краснодар, ул. Уральская</span
+												>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__filter-toggle">
+									<button
+										class="catalog__filter-toggle_button"
+										aria-expanded="true"
+									>
+										фото
+										<img
+											src="images/profile/toggle.svg"
+											alt=""
+											focusable="false"
+										/>
+									</button>
+									<div class="catalog__filter-toggle_content">
+										<div class="catalog__filter-photo">
+											<label class="catalog__filter-photo_label"
+												><input
+													class="catalog__filter-photo_radio"
+													type="checkbox"
+													name="photo"
+													data-index="0"
+												/>
+												<span class="catalog__filter-storage_fake">с фото</span>
+											</label>
+											<label class="catalog__filter-photo_label"
+												><input
+													class="catalog__filter-photo_radio"
+													type="checkbox"
+													name="photo"
+													data-index="1"
+												/>
+												<span class="catalog__filter-photo_fake">без фото</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__filter-toggle">
+									<button
+										class="catalog__filter-toggle_button"
+										aria-expanded="true"
+									>
+										бренд
+										<img
+											src="images/profile/toggle.svg"
+											alt=""
+											focusable="false"
+										/>
+									</button>
+									<div class="catalog__filter-toggle_content">
+										<div class="catalog__filter-brand">
+											<label class="catalog__filter-brand_label"
+												><input
+													class="catalog__filter-brand_radio"
+													type="checkbox"
+													name="brand"
+													data-index="0"
+												/>
+												<span class="catalog__filter-brand_fake">ACERBI</span>
+											</label>
+											<label class="catalog__filter-brand_label"
+												><input
+													class="catalog__filter-brand_radio"
+													type="checkbox"
+													name="brand"
+													data-index="1"
+												/>
+												<span class="catalog__filter-brand_fake">AIRFREN</span>
+											</label>
+											<label class="catalog__filter-brand_label"
+												><input
+													class="catalog__filter-brand_radio"
+													type="checkbox"
+													name="brand"
+													data-index="2"
+												/>
+												<span class="catalog__filter-brand_fake">ALFACAR</span>
+											</label>
+											<label class="catalog__filter-brand_label"
+												><input
+													class="catalog__filter-brand_radio"
+													type="checkbox"
+													name="brand"
+													data-index="3"
+												/>
+												<span class="catalog__filter-brand_fake">ASK</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="catalog__page">
+								<table class="catalog__table">
+									<tr class="catalog__table-headrow">
+										<th class="catalog__table-headitem">артикул</th>
+										<th class="catalog__table-headitem"></th>
+										<th class="catalog__table-headitem">название</th>
+										<th class="catalog__table-headitem">кол-во</th>
+										<th class="catalog__table-headitem">склад</th>
+										<th class="catalog__table-headitem">поставка</th>
+										<th class="catalog__table-headitem">возврат</th>
+										<th class="catalog__table-headitem">цена</th>
+										<th class="catalog__table-headitem"></th>
+									</tr>
+									<tr class="catalog__table-row">
+										<td class="catalog__table-item">548465316</td>
+										<td class="catalog__table-item">
+											<div class="catalog__table-image">
+												<img class="catalog__table-image-item" src="" alt="" />
+											</div>
+										</td>
+										<td class="catalog__table-item">
+											Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач,
+											автобус)Диск колёсный 22.5x9.0, 10x335, ET175, D281
+											(тягач, автобус)
+										</td>
+										<td class="catalog__table-item">58</td>
+										<td class="catalog__table-item">
+											<div class="catalog__table-storage">
+												<div class="catalog__table-storage_city">
+													СПБ
+													<p class="catalog__table-storage_probability">100%</p>
+												</div>
+
+												<p>Московское ш.</p>
+											</div>
+										</td>
+										<td class="catalog__table-item">
+											<p class="catalog__table-date">28.09.2023</p>
+											<p class="catalog__table-time">12:00</p>
+										</td>
+										<td class="catalog__table-item">14 дней</td>
+										<td class="catalog__table-item">4550,80</td>
+										<td class="catalog__table-item">
+											<div class="catalog__table-cart">
+												<input
+													type="text"
+													inputmode="numeric"
+													pattern="\d*"
+													class="catalog__table-input"
+													value="1"
+												/>
+												<button class="catalog__table-cart_button">
+													<img
+														src="images/profile/icon-cart.svg"
+														alt="icon-cart"
+													/>
+												</button>
+											</div>
+										</td>
+									</tr>
+								</table>
+								<div class="catalog__pagination">
+									<button class="catalog__pagination-backward"><</button>
+									<ul class="catalog__pagination-list">
+										<li class="catalog__pagination-item active">1</li>
+										<li class="catalog__pagination-item">2</li>
+										<li class="catalog__pagination-item">3</li>
+										<li class="catalog__pagination-item">4</li>
+										<li class="catalog__pagination-item">5</li>
+									</ul>
+									<button class="catalog__pagination-forward">></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__inner">
+						<div class="footer__logo">
+							<a href="#" class="footer__logo-img"
+								><img src="images/logo_black.svg" alt="logo"
+							/></a>
+							<p class="footer__logo-copyright">© 2023 Автозапчасти</p>
+						</div>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">о компании</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">каталог</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">доставка и оплата</a>
+								</li>
+							</ul>
+						</nav>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">новости</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">бренды</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">+7 (921) 310-38-10 </a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">office@w-part.ru</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script type="text/javascript" src="js/main.min.js"></script>
+		<script>
+			openModal('.catalog__table-row');
+			activateButtons();
+			rangeTooltip();
+		</script>
+	</body>
+</html>

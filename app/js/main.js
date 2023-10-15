@@ -138,10 +138,10 @@ const activeCheckbox = () => {
 	}
 };
 
-const openModal = () => {
-	const account = document.querySelector('.header__buttons-account');
+const openModal = (classname) => {
+	const account = document.querySelector(classname);
 	const modal = document.getElementById('modal');
-	if (!modal) {
+	if (!modal || !account) {
 		return;
 	}
 	const container = document.querySelector('.modal-container');
@@ -165,6 +165,140 @@ const openModal = () => {
 	activeCheckbox();
 };
 
+const toggleList = () => {
+	const toggles = document.querySelectorAll('.catalog__filter-toggle');
+
+	toggles.forEach((item) => {
+		let btn = item.querySelector('.catalog__filter-toggle_button');
+		let content = item.querySelector('.catalog__filter-toggle_content');
+
+		btn.addEventListener('click', () => {
+			let expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+			console.log(expanded);
+			btn.setAttribute('aria-expanded', !expanded);
+
+			content.hidden = expanded;
+		});
+	});
+};
+
+const rangeTooltip = () => {
+	const rangers = document.querySelectorAll('.catalog__filter-ranger');
+
+	rangers.forEach((item) => {
+		const input = item.querySelector('.catalog__filter-input');
+		const value = item.querySelector('.catalog__filter-value');
+
+		input.addEventListener('input', () => {
+			const newValue = Number(
+				((input.value - input.min) * 100) / (input.max - input.min),
+			);
+			const newPosition = 10 - newValue * 0.2;
+			value.innerHTML = `<span>${input.value} ${input.dataset.condition}</span>`;
+
+			value.style.left = `calc(${newValue}% + (${newPosition}px))`;
+		});
+	});
+};
+
+const activateButtons = () => {
+	const searchButtons = document.querySelectorAll('.search__buttons-item');
+	const categoriesButtons = document.querySelectorAll('.categories__list-item');
+	const sortButtons = document.querySelectorAll('.catalog__filter-sort_item');
+	const paginationButtons = document.querySelectorAll(
+		'.catalog__pagination-item',
+	);
+
+	searchButtons.forEach((item) => {
+		item.addEventListener('click', () => {
+			const active = document.querySelector('.search__buttons-item.active');
+			item.classList.add('active');
+			active.classList.remove('active');
+		});
+		item.removeEventListener('click', () => {
+			const active = document.querySelector('.search__buttons-item.active');
+			item.classList.add('active');
+			active.classList.remove('active');
+		});
+	});
+
+	categoriesButtons.forEach((item) => {
+		item.addEventListener('click', () => {
+			const active = document.querySelector('.categories__list-item.active');
+			item.classList.add('active');
+			active.classList.remove('active');
+		});
+		item.removeEventListener('click', () => {
+			const active = document.querySelector('.categories__list-item.active');
+			item.classList.add('active');
+			active.classList.remove('active');
+		});
+	});
+
+	sortButtons.forEach((item) => {
+		item.addEventListener('click', () => {
+			const active = document.querySelector(
+				'.catalog__filter-sort_item.active',
+			);
+			item.classList.add('active');
+			active.classList.remove('active');
+		});
+		item.removeEventListener('click', () => {
+			const active = document.querySelector(
+				'.catalog__filter-sort_item.active',
+			);
+			item.classList.add('active');
+			active.classList.remove('active');
+		});
+	});
+
+	paginationButtons.forEach((item) => {
+		item.addEventListener('click', () => {
+			const active = document.querySelector('.catalog__pagination-item.active');
+			item.classList.add('active');
+			active.classList.remove('active');
+		});
+		item.removeEventListener('click', () => {
+			const active = document.querySelector('.catalog__pagination-item.active');
+			item.classList.add('active');
+			active.classList.remove('active');
+		});
+	});
+};
+
+const activateOrderTabs = () => {
+	const tabs = document.querySelectorAll('.orders__tabs-title');
+
+	tabs.forEach((item) => {
+		item.addEventListener('click', () => {
+			const active = document.querySelector('.orders__tabs-title.active');
+			const activeContent = document.querySelector(
+				`.orders__table[data-index="${active.dataset.index}"]`,
+			);
+			const content = document.querySelector(
+				`.orders__table[data-index="${item.dataset.index}"]`,
+			);
+			item.classList.add('active');
+			content.hidden = false;
+			active.classList.remove('active');
+			activeContent.hidden = true;
+		});
+		item.removeEventListener('click', () => {
+			const active = document.querySelector('.orders__tabs-title.active');
+			const activeContent = document.querySelector(
+				`.orders__table[data-index="${active.dataset.index}"]`,
+			);
+			const content = document.querySelector(
+				`.orders__table[data-index="${item.dataset.index}"]`,
+			);
+			item.classList.add('active');
+			content.hidden = false;
+			active.classList.remove('active');
+			activeContent.hidden = true;
+		});
+	});
+};
+
 CitySearch();
 
 activateTabs('.search__tabs-panel', '.search__tabs-link', '.search__tabs-item');
@@ -177,4 +311,6 @@ activateTabs(
 	'.profile__tabs-item',
 );
 
-openModal();
+toggleList();
+
+

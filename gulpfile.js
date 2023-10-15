@@ -72,12 +72,7 @@ export function build() {
 	return gulp
 		.src(
 			[
-				'app/css/account.css',
-				'app/css/choices.min.css',
-				'app/css/contacts.css',
-				'app/css/delievery.css',
-				'app/css/main.css',
-				'app/css/slick.css',
+				'app/css/*.css',
 				'app/js/main.min.js',
 				'app/*.html',
 			],
