@@ -788,3 +788,147 @@
 	}
 }
 
+.cart {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+	&__title {
+		@extend %title-min-font;
+		padding-bottom: 39px;
+	}
+	&__table {
+		height: fit-content;
+		border-collapse: collapse;
+		width: 100%;
+		margin-bottom: 44px;
+		&-image {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&-item {
+				width: 64px;
+				height: 60px;
+			}
+		}
+		&-input {
+			width: 24px;
+			text-align: center;
+			border: none;
+			border-bottom: 1px solid $black;
+			outline: none;
+			background-color: transparent;
+		}
+		&-row {
+			border-bottom: 1px solid $gray;
+			height: 80px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: rgba(253, 219, 141, 0.1);
+			}
+		}
+		&-headrow {
+			border-bottom: 2px solid $gray;
+			height: 42px;
+		}
+		&-headitem {
+			border-bottom: 1px solid $gray;
+			text-align: center;
+			vertical-align: top;
+		}
+		&-item {
+			text-align: center;
+			max-width: 247px;
+			height: 80px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			padding: 0 10px;
+		}
+		&-date,
+		&-time {
+			text-align: left;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+		}
+		&-time {
+			color: $dark-gray;
+		}
+		&-storage {
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			&_city {
+				display: flex;
+			}
+			&_probability {
+				background-color: #219653;
+				color: $light-gray;
+				font-size: 11px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 1px 2px;
+				margin-left: auto;
+			}
+		}
+		&-delete {
+			border: none;
+			outline: none;
+			background-color: transparent;
+			cursor: pointer;
+			&:hover {
+				& img {
+					filter: brightness(0) saturate(100%) invert(70%) sepia(60%)
+						saturate(634%) hue-rotate(351deg) brightness(101%) contrast(97%);
+				}
+			}
+		}
+	}
+	&__info {
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 130%;
+		&-highlight {
+			font-weight: 500;
+		}
+
+		&-price {
+			padding-top: 10px;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 137.9%;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 40px;
+		padding-top: 56px;
+		&-approve,
+		&-return {
+			padding: 14px 54px;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+		}
+
+		&-approve {
+			background-color: $yellow;
+			&:hover {
+				box-shadow: 0px 4px 10px 0px #a77500 inset;
+				border: 0px solid #a77500;
+			}
+		}
+
+		&-return {
+			background-color: $gray;
+		}
+	}
+}
