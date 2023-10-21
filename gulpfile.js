@@ -70,16 +70,9 @@ export function styles() {
 
 export function build() {
 	return gulp
-		.src(
-			[
-				'app/css/*.css',
-				'app/js/main.min.js',
-				'app/*.html',
-			],
-			{
-				base: 'app',
-			},
-		)
+		.src(['app/css/*.css', 'app/js/main.min.js', 'app/*.html'], {
+			base: 'app',
+		})
 		.pipe(gulp.dest('docs'));
 }
 
@@ -89,6 +82,6 @@ export function watching() {
 	gulp.watch(['app/*.html']).on('change', browserSync.reload);
 }
 
-export const builder = gulp.series(cleanDist, images, build);
+export const builder = gulp.series(styles, scripts, cleanDist, images, build);
 
 export default gulp.parallel(styles, scripts, browsersync, watching);
