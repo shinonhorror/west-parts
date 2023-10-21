@@ -165,30 +165,28 @@
 							<nav class="accountmenu">
 								<ul class="accountmenu__list">
 									<li class="accountmenu__list-item">
-										<a href="acc-catalog.html" class="accountmenu__list-link"
+										<a href="acc-cart.html" class="accountmenu__list-link"
 											><img
 												src="images/profile/catalogs.svg"
-												alt="catalogs-active"
+												alt="carts-active"
 											/>
 											интернет-магазин</a
 										>
 									</li>
 									<li class="accountmenu__list-item">
-										<a
-											href="acc-orders.html"
-											class="accountmenu__list-link active"
+										<a href="acc-orders.html" class="accountmenu__list-link"
 											><img
 												src="images/profile/orders.svg"
-												alt="catalogs-active"
+												alt="carts-active"
 											/>
 											заказы и возвраты</a
 										>
 									</li>
 									<li class="accountmenu__list-item">
-										<a href="catalog.html" class="accountmenu__list-link"
+										<a href="cart.html" class="accountmenu__list-link"
 											><img
 												src="images/profile/finance.svg"
-												alt="catalogs-active"
+												alt="carts-active"
 											/>
 											финансы</a
 										>
@@ -201,162 +199,105 @@
 			</header>
 
 			<main class="main">
-				<section class="search">
+				<section class="manage">
 					<div class="container">
-						<div class="search__inner">
-							<div class="search__main">
-								<label class="search__input-wrapper">
-									<img
-										class="search__input-icon"
-										src="images/search.svg"
-										alt=""
-									/>
-									<input
-										class="search__input-input"
-										type="text"
-										placeholder="введите артикул"
-									/>
-								</label>
-								<button class="search__main-button">найти</button>
-								<div class="search__main-contacts">
-									<img src="images/profile/whatsapp.svg" alt="whatsapp" />
-									<div class="search__main-info">
-										<p class="search__main-desc">
-											Ваш менеджер — Василий Иванов
-										</p>
-										<p class="search__main-desc">
-											+7 (916) 123-45-67, vasilyi_ivanov@email.com
-										</p>
-									</div>
+						<div class="manage__inner">
+							<div class="manage__info">
+								<img src="images/profile/whatsapp.svg" alt="whatsapp" />
+								<div class="search__main-info">
+									<p class="manage__info-name">Ваш менеджер — Василий Иванов</p>
+									<p class="manage__info-contacts">
+										+7 (916) 123-45-67, vasilyi_ivanov@email.com
+									</p>
 								</div>
-							</div>
-							<div class="search__buttons">
-								<button class="search__buttons-item active">по артикулу</button>
-								<button class="search__buttons-item">по наименованию</button>
-								<button class="search__buttons-item">по VIN</button>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section class="orders">
+
+				<section class="cart">
 					<div class="container">
-						<div class="orders__inner">
-							<div class="orders__tabs">
-								<button
-									class="orders__tabs-title active"
-									aria-expanded="true"
-									data-index="0"
-								>
-									Заказы
-								</button>
-								<button
-									class="orders__tabs-title"
-									aria-expanded="false"
-									data-index="1"
-								>
-									Возвраты
-								</button>
+						<div class="cart__inner">
+							<h2 class="cart__title">Корзина</h2>
+							<table class="cart__table">
+								<tr class="cart__table-headrow">
+									<th class="cart__table-headitem">артикул</th>
+									<th class="cart__table-headitem"></th>
+									<th class="cart__table-headitem">название</th>
+									<th class="cart__table-headitem">кол-во</th>
+									<th class="cart__table-headitem">склад</th>
+									<th class="cart__table-headitem">поставка</th>
+									<th class="cart__table-headitem">возврат</th>
+									<th class="cart__table-headitem">цена</th>
+									<th class="cart__table-headitem">сумма</th>
+									<th class="cart__table-headitem">удалить</th>
+								</tr>
+								<tr class="cart__table-row">
+									<td class="cart__table-item">548465316</td>
+									<td class="cart__table-item">
+										<div class="cart__table-image">
+											<img class="cart__table-image-item" src="" alt="" />
+										</div>
+									</td>
+									<td class="cart__table-item">
+										Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач,
+										автобус)Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач,
+										автобус)
+									</td>
+									<td class="cart__table-item">
+										<input
+											type="text"
+											inputmode="numeric"
+											pattern="\d*"
+											class="cart__table-input"
+											value="1"
+										/>
+									</td>
+									<td class="cart__table-item">
+										<div class="cart__table-storage">
+											<div class="cart__table-storage_city">
+												СПБ
+												<p class="cart__table-storage_probability">100%</p>
+											</div>
+											<p>Московское ш.</p>
+										</div>
+									</td>
+									<td class="cart__table-item">
+										<p class="cart__table-date">28.09.2023</p>
+										<p class="cart__table-time">12:00</p>
+									</td>
+									<td class="cart__table-item">14 дней</td>
+									<td class="cart__table-item">4550,80</td>
+									<td class="cart__table-item">4550,80</td>
+									<td class="cart__table-item">
+										<button class="cart__table-delete">
+											<img
+												src="images/profile/icon-delete.svg"
+												alt="icon-delete"
+											/>
+										</button>
+									</td>
+								</tr>
+							</table>
+							<div class="cart__info">
+								<p class="cart__info-storage">
+									<span class="cart__info-highlight">Склад:</span>
+									Санкт-Петербург, Московское ш.
+								</p>
+								<p class="cart__info-date">
+									<span class="cart__info-highlight">Дата поставки: </span>
+									28.09.2023
+								</p>
+								<p class="cart__info-price">Сумма: 9111,60 руб.</p>
 							</div>
-
-							<table class="orders__table" data-index="0">
-								<thead class="orders__table-head">
-									<tr class="orders__table-row">
-										<th class="orders__table-item">заказ</th>
-										<th class="orders__table-item">сумма</th>
-										<th class="orders__table-item">дата</th>
-										<th class="orders__table-item">статус</th>
-										<th class="orders__table-item"></th>
-									</tr>
-								</thead>
-								<tbody class="orders__table-body">
-									<tr class="orders__table-row">
-										<td class="orders__table-item">468–74536</td>
-										<td class="orders__table-item">59 264 ₽</td>
-										<td class="orders__table-item">26.09.2023</td>
-										<td class="orders__table-item">доставлено</td>
-										<td class="orders__table-item">
-											<a href="#">подробнее</a>
-										</td>
-									</tr>
-									<tr class="orders__table-row">
-										<td class="orders__table-item">468–74536</td>
-										<td class="orders__table-item">59 264 ₽</td>
-										<td class="orders__table-item">26.09.2023</td>
-										<td class="orders__table-item">доставлено</td>
-										<td class="orders__table-item">
-											<a href="#">подробнее</a>
-										</td>
-									</tr>
-									<tr class="orders__table-row">
-										<td class="orders__table-item">468–74536</td>
-										<td class="orders__table-item">59 264 ₽</td>
-										<td class="orders__table-item">26.09.2023</td>
-										<td class="orders__table-item">доставлено</td>
-										<td class="orders__table-item">
-											<a href="#">подробнее</a>
-										</td>
-									</tr>
-									<tr class="orders__table-row">
-										<td class="orders__table-item">468–74536</td>
-										<td class="orders__table-item">59 264 ₽</td>
-										<td class="orders__table-item">26.09.2023</td>
-										<td class="orders__table-item">доставлено</td>
-										<td class="orders__table-item">
-											<a href="#">подробнее</a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-
-							<table class="orders__table" hidden data-index="1">
-								<thead class="orders__table-head">
-									<tr class="orders__table-row">
-										<th class="orders__table-item">возврат</th>
-										<th class="orders__table-item">сумма</th>
-										<th class="orders__table-item">дата</th>
-										<th class="orders__table-item">статус</th>
-										<th class="orders__table-item"></th>
-									</tr>
-								</thead>
-								<tbody class="orders__table-body">
-									<tr class="orders__table-row">
-										<td class="orders__table-item">468–74536</td>
-										<td class="orders__table-item">59 264 ₽</td>
-										<td class="orders__table-item">26.09.2023</td>
-										<td class="orders__table-item">ожидает</td>
-										<td class="orders__table-item">
-											<a href="#">подробнее</a>
-										</td>
-									</tr>
-									<tr class="orders__table-row">
-										<td class="orders__table-item">468–74536</td>
-										<td class="orders__table-item">59 264 ₽</td>
-										<td class="orders__table-item">26.09.2023</td>
-										<td class="orders__table-item">ожидает</td>
-										<td class="orders__table-item">
-											<a href="#">подробнее</a>
-										</td>
-									</tr>
-									<tr class="orders__table-row">
-										<td class="orders__table-item">468–74536</td>
-										<td class="orders__table-item">59 264 ₽</td>
-										<td class="orders__table-item">26.09.2023</td>
-										<td class="orders__table-item">ожидает</td>
-										<td class="orders__table-item">
-											<a href="#">подробнее</a>
-										</td>
-									</tr>
-									<tr class="orders__table-row">
-										<td class="orders__table-item">468–74536</td>
-										<td class="orders__table-item">59 264 ₽</td>
-										<td class="orders__table-item">26.09.2023</td>
-										<td class="orders__table-item">ожидает</td>
-										<td class="orders__table-item">
-											<a href="#">подробнее</a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+							<div class="cart__buttons">
+								<a class="cart__buttons-approve" href="acc-placing.html"
+									>оформить заказ</a
+								>
+								<a class="cart__buttons-return" href="acc-catalog.html"
+									>вернуться в каталог</a
+								>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -414,8 +355,7 @@
 
 		<script type="text/javascript" src="js/main.min.js"></script>
 		<script>
-			openModal('.catalog__table-row');
-			activateOrderTabs('.orders__tabs-title', '.orders__table');
+			openModal('.cart__table-image-item');
 		</script>
 	</body>
 </html>
