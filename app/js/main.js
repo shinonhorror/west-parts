@@ -266,30 +266,31 @@ const activateButtons = () => {
 	});
 };
 
-const activateOrderTabs = () => {
-	const tabs = document.querySelectorAll('.orders__tabs-title');
+const activateOrderTabs = (tab, contents) => {
+	const tabs = document.querySelectorAll(tab);
 
 	tabs.forEach((item) => {
 		item.addEventListener('click', () => {
-			const active = document.querySelector('.orders__tabs-title.active');
+			const active = document.querySelector(`${tab}.active`);
 			const activeContent = document.querySelector(
-				`.orders__table[data-index="${active.dataset.index}"]`,
+				`${contents}[data-index="${active.dataset.index}"]`,
 			);
 			const content = document.querySelector(
-				`.orders__table[data-index="${item.dataset.index}"]`,
+				`${contents}[data-index="${item.dataset.index}"]`,
 			);
 			item.classList.add('active');
 			content.hidden = false;
 			active.classList.remove('active');
 			activeContent.hidden = true;
 		});
+
 		item.removeEventListener('click', () => {
-			const active = document.querySelector('.orders__tabs-title.active');
+			const active = document.querySelector(`${tab}.active`);
 			const activeContent = document.querySelector(
-				`.orders__table[data-index="${active.dataset.index}"]`,
+				`${contents}[data-index="${active.dataset.index}"]`,
 			);
 			const content = document.querySelector(
-				`.orders__table[data-index="${item.dataset.index}"]`,
+				`${contents}[data-index="${item.dataset.index}"]`,
 			);
 			item.classList.add('active');
 			content.hidden = false;
@@ -312,5 +313,3 @@ activateTabs(
 );
 
 toggleList();
-
-

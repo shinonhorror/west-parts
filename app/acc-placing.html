@@ -214,90 +214,144 @@
 						</div>
 					</div>
 				</section>
-
-				<section class="cart">
+				<section class="breadcrumbs">
 					<div class="container">
-						<div class="cart__inner">
-							<h2 class="cart__title">Корзина</h2>
-							<table class="cart__table">
-								<tr class="cart__table-headrow">
-									<th class="cart__table-headitem">артикул</th>
-									<th class="cart__table-headitem"></th>
-									<th class="cart__table-headitem">название</th>
-									<th class="cart__table-headitem">кол-во</th>
-									<th class="cart__table-headitem">склад</th>
-									<th class="cart__table-headitem">поставка</th>
-									<th class="cart__table-headitem">возврат</th>
-									<th class="cart__table-headitem">цена</th>
-									<th class="cart__table-headitem">сумма</th>
-									<th class="cart__table-headitem">удалить</th>
-								</tr>
-								<tr class="cart__table-row">
-									<td class="cart__table-item">548465316</td>
-									<td class="cart__table-item">
-										<div class="cart__table-image">
-											<img class="cart__table-image-item" src="" alt="" />
-										</div>
-									</td>
-									<td class="cart__table-item">
-										Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач,
-										автобус)Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач,
-										автобус)
-									</td>
-									<td class="cart__table-item">
+						<div class="breadcrumbs__inner">
+							<a class="breadcrumbs__link" href="acc-cart.html">Корзина</a>
+							<p class="breadcrumbs__divider">></p>
+							<a class="breadcrumbs__link">Оформление заказа</a>
+						</div>
+					</div>
+				</section>
+
+				<section class="choice">
+					<div class="container">
+						<div class="choice__inner">
+							<div class="choice__tabs">
+								<button class="choice__tabs-title active" data-index="0">
+									Доставка
+								</button>
+								<button class="choice__tabs-title" data-index="1">
+									Самовывоз
+								</button>
+							</div>
+
+							<form class="choice__delivery">
+								<div class="choice__tab" data-index="0">
+									<div class="choice__tab-content">
 										<input
 											type="text"
-											inputmode="numeric"
-											pattern="\d*"
-											class="cart__table-input"
-											value="1"
+											name="street"
+											class="choice__delivery-street"
+											placeholder="улица"
 										/>
-									</td>
-									<td class="cart__table-item">
-										<div class="cart__table-storage">
-											<div class="cart__table-storage_city">
-												СПБ
-												<p class="cart__table-storage_probability">100%</p>
-											</div>
-											<p>Московское ш.</p>
-										</div>
-									</td>
-									<td class="cart__table-item">
-										<p class="cart__table-date">28.09.2023</p>
-										<p class="cart__table-time">12:00</p>
-									</td>
-									<td class="cart__table-item">14 дней</td>
-									<td class="cart__table-item">4550,80</td>
-									<td class="cart__table-item">4550,80</td>
-									<td class="cart__table-item">
-										<button class="cart__table-delete">
-											<img
-												src="images/profile/icon-delete.svg"
-												alt="icon-delete"
+										<div class="choice__delivery-address">
+											<input
+												type="text"
+												name="house"
+												class="choice__delivery-house"
+												placeholder="дом"
 											/>
-										</button>
-									</td>
-								</tr>
-							</table>
-							<div class="cart__info">
-								<p class="cart__info-storage">
-									<span class="cart__info-highlight">Склад:</span>
-									Санкт-Петербург, Московское ш.
-								</p>
-								<p class="cart__info-date">
-									<span class="cart__info-highlight">Дата поставки: </span>
-									28.09.2023
-								</p>
-								<p class="cart__info-price">Сумма: 9111,60 руб.</p>
-							</div>
-							<div class="cart__buttons">
-								<a class="cart__buttons-approve" href="acc-placing.html"
-									>оформить заказ</a
-								>
-								<a class="cart__buttons-return" href="acc-catalog.html"
-									>вернуться в каталог</a
-								>
-							</div>
+											<input
+												type="text"
+												name="korpus"
+												class="choice__delivery-korpus"
+												placeholder="строение"
+											/>
+											<input
+												type="text"
+												name="office"
+												class="choice__delivery-office"
+												placeholder="офис"
+											/>
+										</div>
+										<textarea
+											name="delivery-comment"
+											class="choice__delivery-comment"
+											placeholder="комментарий"
+										></textarea>
+										<h2 class="choice__delivery-title">Дата доставки</h2>
+										<div class="choice__datewrapper">
+											<div class="choice__date">
+												<select name="" id="" class="choice__date-select">
+													<option placeholder>выбор даты</option>
+													<option value="Санкт-Петербург">
+														Санкт-Петербург
+													</option>
+													<option value="Москва">Москва</option>
+													<option value="Краснодар">Краснодар</option>
+												</select>
+											</div>
+											<div class="choice__time">
+												<select name="" id="" class="choice__time-select">
+													<option placeholder>временной интервал</option>
+													<option value="Санкт-Петербург">
+														Санкт-Петербург
+													</option>
+													<option value="Москва">Москва</option>
+													<option value="Краснодар">Краснодар</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="choice__tab" data-index="1">
+									<div class="choice__tab-content">
+										<div class="choice__delivery-checkbox">
+											<label class="choice__delivery-storage_label"
+												><input
+													class="choice__delivery-storage_radio"
+													type="radio"
+													name="storage"
+													data-index="1"
+													checked
+												/>
+												<span class="choice__delivery-storage_fake"
+													>со склада WP</span
+												>
+											</label>
+											<label class="choice__delivery-storage_label"
+												><input
+													class="choice__delivery-storage_radio"
+													type="radio"
+													name="storage"
+													data-index="0"
+												/>
+												<span class="choice__delivery-storage_fake"
+													>из пункта самовывоза</span
+												>
+											</label>
+										</div>
+										<div
+											id="spbStorage"
+											class="class=&quot;choice__delivery-storage_map"
+										></div>
+									</div>
+								</div>
+								<h2 class="choice__delivery-title">Получатель</h2>
+								<div class="choice__delivery-owner">
+									<input
+										type="text"
+										name="fio"
+										class="choice__delivery-fio"
+										placeholder="имя и фамилия"
+									/>
+									<input
+										type="text"
+										name="phone"
+										class="choice__delivery-phone"
+										placeholder="номер телефона"
+									/>
+								</div>
+								<h2 class="choice__delivery-title">Комментарий</h2>
+								<textarea class="choice__delivery-allcomment"></textarea>
+								<div class="cart__buttons">
+									<a class="cart__buttons-approve" href="acc-placing.html"
+										>продолжить</a
+									>
+									<a class="cart__buttons-return" href="acc-cart.html">назад</a>
+								</div>
+							</form>
 						</div>
 					</div>
 				</section>
@@ -356,6 +410,25 @@
 		<script type="text/javascript" src="js/main.min.js"></script>
 		<script>
 			openModal('.cart__table-image-item');
+			activateOrderTabs('.choice__tabs-title', '.choice__tab');
+			const choises = new Choices('.choice__date-select', {
+				searchEnabled: false,
+				itemSelectText: '',
+				placeholder: true,
+			});
+			const choisesTime = new Choices('.choice__time-select', {
+				searchEnabled: false,
+				itemSelectText: '',
+				placeholder: true,
+			});
+
+			ymaps.ready(function () {
+				new ymaps.Map('spbStorage', {
+					center: [59.90862, 30.32179],
+					zoom: 16,
+					controls: [],
+				});
+			});
 		</script>
 	</body>
 </html>
