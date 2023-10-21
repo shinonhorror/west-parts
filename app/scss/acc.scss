@@ -580,6 +580,7 @@
 			border-bottom: 1px solid $gray;
 			text-align: center;
 			vertical-align: top;
+			padding: 0 10px;
 		}
 		&-item {
 			text-align: center;
@@ -838,6 +839,7 @@
 			border-bottom: 1px solid $gray;
 			text-align: center;
 			vertical-align: top;
+			padding: 0 10px;
 		}
 		&-item {
 			text-align: center;
@@ -857,6 +859,10 @@
 		}
 		&-time {
 			color: $dark-gray;
+		}
+		&-quantity {
+			text-align: center;
+			padding-bottom: 1px solid $black;
 		}
 		&-storage {
 			display: flex;

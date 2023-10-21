@@ -76,6 +76,7 @@
 		&-item {
 			display: flex;
 			gap: 40px;
+			cursor: pointer;
 		}
 
 		&-info {
@@ -108,6 +109,64 @@
 		&:hover {
 			box-shadow: 0px 4px 10px 0px #a77500 inset;
 			border: 1px solid #a77500;
+		}
+	}
+}
+
+.modal {
+	&__news {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: 0 42px;
+		margin-top: -30px;
+		&-date {
+			color: $dark-gray;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 137.9%;
+		}
+		&-title {
+			padding-top: 41px;
+			padding-bottom: 60px;
+			font-size: 28px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 137.9%;
+		}
+		&-img {
+			width: 700px;
+			height: 396px;
+		}
+		&-info {
+			margin-top: 57px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+		&-text {
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+		}
+		&-button {
+			margin-top: 100px;
+			border: none;
+			outline: none;
+			padding: 14px 54px;
+			width: fit-content;
+			background-color: $yellow;
+			font-size: 26px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			cursor: pointer;
+			&:hover {
+				box-shadow: 0px 4px 10px 0px #a77500 inset;
+				border: 0px solid #a77500;
+			}
 		}
 	}
 }

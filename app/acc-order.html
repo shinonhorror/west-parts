@@ -254,7 +254,8 @@
 									<th class="order__table-headitem">возврат</th>
 									<th class="order__table-headitem">цена</th>
 									<th class="order__table-headitem">сумма</th>
-									<th class="order__table-headitem">удалить</th>
+									<th class="order__table-headitem">добавить в корзину</th>
+									<th class="order__table-headitem">вернуть</th>
 								</tr>
 								<tr class="order__table-row">
 									<td class="order__table-item">548465316</td>
@@ -269,7 +270,7 @@
 										автобус)
 									</td>
 									<td class="order__table-item">
-										<p class="order__table-input">1</p>
+										<p class="order__table-quantity">1</p>
 									</td>
 									<td class="order__table-item">
 										<div class="order__table-storage">
@@ -290,7 +291,15 @@
 									<td class="order__table-item">
 										<button class="order__table-delete">
 											<img
-												src="images/profile/icon-delete.svg"
+												src="images/profile/icon-cart.svg"
+												alt="icon-delete"
+											/>
+										</button>
+									</td>
+									<td class="order__table-item">
+										<button class="order__table-delete">
+											<img
+												src="images/profile/icon-return.svg"
 												alt="icon-delete"
 											/>
 										</button>
@@ -369,7 +378,9 @@
 									<a href="#" class="footer__list-link">каталог</a>
 								</li>
 								<li class="footer__list-item">
-									<a href="delivery.html" class="footer__list-link">доставка и оплата</a>
+									<a href="delivery.html" class="footer__list-link"
+										>доставка и оплата</a
+									>
 								</li>
 							</ul>
 						</nav>
@@ -403,7 +414,7 @@
 
 		<script type="text/javascript" src="js/main.min.js"></script>
 		<script>
-			openModal('.order__table-image-item');
+			openModal('.order__table-image-item', 'modal');
 		</script>
 	</body>
 </html>

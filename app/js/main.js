@@ -138,9 +138,9 @@ const activeCheckbox = () => {
 	}
 };
 
-const openModal = (classname) => {
+const openModal = (classname, id) => {
 	const account = document.querySelector(classname);
-	const modal = document.getElementById('modal');
+	const modal = document.getElementById(id);
 	if (!modal || !account) {
 		return;
 	}
