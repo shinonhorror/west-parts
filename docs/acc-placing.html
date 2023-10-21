@@ -295,15 +295,15 @@
 										</div>
 									</div>
 								</div>
-								<div class="choice__tab" data-index="1">
+								<div class="choice__tab" data-index="1" hidden>
 									<div class="choice__tab-content">
 										<div class="choice__delivery-checkbox">
 											<label class="choice__delivery-storage_label"
 												><input
-													class="choice__delivery-storage_radio"
+													class="choice__delivery-storage_radio active"
 													type="radio"
 													name="storage"
-													data-index="1"
+													data-index="0"
 													checked
 												/>
 												<span class="choice__delivery-storage_fake"
@@ -315,17 +315,44 @@
 													class="choice__delivery-storage_radio"
 													type="radio"
 													name="storage"
-													data-index="0"
+													data-index="1"
 												/>
 												<span class="choice__delivery-storage_fake"
 													>из пункта самовывоза</span
 												>
 											</label>
 										</div>
-										<div
-											id="spbStorage"
-											class="class=&quot;choice__delivery-storage_map"
-										></div>
+										<div class="choice__storage-tab" data-index="0">
+											<div class="choice__delivery-storage_wrapper">
+												<div
+													id="spbStorage"
+													class="choice__delivery-storage_map"
+												></div>
+												<div class="choice__delivery-storage_info">
+													<p class="choice__delivery-storage_text">
+														Колпинское ш., д 135
+													</p>
+													<p>+7 921 333-35-10</p>
+													<p class="choice__delivery-storage_divider">
+														понедельник – пятница
+													</p>
+													<p>9:00 – 18:00</p>
+												</div>
+											</div>
+										</div>
+										<div class="choice__storage-tab" data-index="1" hidden>
+											<div class="choice__delivery-storage_wrapper">
+												<div
+													id="points"
+													class="choice__delivery-storage_map"
+												></div>
+												<div class="choice__delivery-storage_info">
+													<p class="choice__delivery-storage_text">
+														Выберите пункт
+													</p>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<h2 class="choice__delivery-title">Получатель</h2>
@@ -346,7 +373,7 @@
 								<h2 class="choice__delivery-title">Комментарий</h2>
 								<textarea class="choice__delivery-allcomment"></textarea>
 								<div class="cart__buttons">
-									<a class="cart__buttons-approve" href="acc-placing.html"
+									<a class="cart__buttons-approve" href="acc-approve.html"
 										>продолжить</a
 									>
 									<a class="cart__buttons-return" href="acc-cart.html">назад</a>
@@ -369,26 +396,26 @@
 						<nav class="footer__menu">
 							<ul class="footer__list">
 								<li class="footer__list-item">
-									<a href="#" class="footer__list-link">о компании</a>
+									<a href="about.html" class="footer__list-link">о компании</a>
 								</li>
 								<li class="footer__list-item">
 									<a href="#" class="footer__list-link">каталог</a>
 								</li>
 								<li class="footer__list-item">
-									<a href="#" class="footer__list-link">доставка и оплата</a>
+									<a href="delivery.html" class="footer__list-link">доставка и оплата</a>
 								</li>
 							</ul>
 						</nav>
 						<nav class="footer__menu">
 							<ul class="footer__list">
 								<li class="footer__list-item">
-									<a href="#" class="footer__list-link">новости</a>
+									<a href="news.html" class="footer__list-link">новости</a>
 								</li>
 								<li class="footer__list-item">
 									<a href="#" class="footer__list-link">бренды</a>
 								</li>
 								<li class="footer__list-item">
-									<a href="#" class="footer__list-link">контакты</a>
+									<a href="contacts.html" class="footer__list-link">контакты</a>
 								</li>
 							</ul>
 						</nav>
@@ -408,9 +435,17 @@
 		</div>
 
 		<script type="text/javascript" src="js/main.min.js"></script>
+		<script
+			src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+			type="text/javascript"
+		></script>
 		<script>
-			openModal('.cart__table-image-item');
+			openModal('.cart__table-image-item', 'modal');
 			activateOrderTabs('.choice__tabs-title', '.choice__tab');
+			activateOrderTabs(
+				'.choice__delivery-storage_radio',
+				'.choice__storage-tab',
+			);
 			const choises = new Choices('.choice__date-select', {
 				searchEnabled: false,
 				itemSelectText: '',
@@ -424,6 +459,14 @@
 
 			ymaps.ready(function () {
 				new ymaps.Map('spbStorage', {
+					center: [59.90862, 30.32179],
+					zoom: 16,
+					controls: [],
+				});
+			});
+
+			ymaps.ready(function () {
+				new ymaps.Map('points', {
 					center: [59.90862, 30.32179],
 					zoom: 16,
 					controls: [],

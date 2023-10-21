@@ -214,11 +214,20 @@
 						</div>
 					</div>
 				</section>
-
+				<section class="breadcrumbs">
+					<div class="container">
+						<div class="breadcrumbs__inner">
+							<a class="breadcrumbs__link" href="acc-cart.html">Корзина</a>
+							<p class="breadcrumbs__divider">></p>
+							<a class="breadcrumbs__link">Оформление заказа</a>
+							<p class="breadcrumbs__divider">></p>
+							<a class="breadcrumbs__link">Подтверждение данных заказа</a>
+						</div>
+					</div>
+				</section>
 				<section class="cart">
 					<div class="container">
 						<div class="cart__inner">
-							<h2 class="cart__title">Корзина</h2>
 							<table class="cart__table">
 								<tr class="cart__table-headrow">
 									<th class="cart__table-headitem">артикул</th>
@@ -245,13 +254,7 @@
 										автобус)
 									</td>
 									<td class="cart__table-item">
-										<input
-											type="text"
-											inputmode="numeric"
-											pattern="\d*"
-											class="cart__table-input"
-											value="1"
-										/>
+										<p class="cart__table-input">1</p>
 									</td>
 									<td class="cart__table-item">
 										<div class="cart__table-storage">
@@ -288,14 +291,25 @@
 									<span class="cart__info-highlight">Дата поставки: </span>
 									28.09.2023
 								</p>
+								<p class="cart__info-address">
+									<span class="cart__info-highlight">Доставка по адресу: </span>
+									г. Санкт-Петербург, Набережная Обводного канала, Д.92 ЛИТ.А,
+									офис 215
+								</p>
+								<p class="cart__info-date">
+									<span class="cart__info-highlight">Дата доставки: </span>
+									28.09.2023 с 12:00 до 18:00
+								</p>
+								<p class="cart__info-date">
+									<span class="cart__info-highlight">Получатель: </span> Василий
+									Петров
+								</p>
 								<p class="cart__info-price">Сумма: 9111,60 руб.</p>
 							</div>
 							<div class="cart__buttons">
-								<a class="cart__buttons-approve" href="acc-placing.html"
-									>оформить заказ</a
-								>
-								<a class="cart__buttons-return" href="acc-catalog.html"
-									>вернуться в каталог</a
+								<a class="cart__buttons-approve">отправить заказ</a>
+								<a class="cart__buttons-return" href="acc-placing.html"
+									>назад</a
 								>
 							</div>
 						</div>
