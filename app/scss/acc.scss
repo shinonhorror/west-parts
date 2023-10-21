@@ -788,7 +788,8 @@
 	}
 }
 
-.cart {
+.cart,
+.order {
 	&__inner {
 		display: flex;
 		flex-direction: column;
@@ -896,7 +897,9 @@
 		&-highlight {
 			font-weight: 500;
 		}
-
+		&-address {
+			padding-top: 10px;
+		}
 		&-price {
 			padding-top: 10px;
 			font-size: 24px;
@@ -934,6 +937,11 @@
 }
 
 .choice {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 175px;
+	}
 	&__tabs {
 		padding-top: 41px;
 		display: flex;
@@ -1028,7 +1036,28 @@
 			width: 100%;
 			gap: 150px;
 		}
-
+		&-storage {
+			&_wrapper {
+				display: flex;
+				gap: 41px;
+			}
+			&_map {
+				min-width: 700px;
+				height: 287px;
+			}
+			&_info {
+				min-width: 100%;
+			}
+			&_text {
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 130%;
+			}
+			&_divider {
+				padding-top: 40px;
+			}
+		}
 		&-storage_label {
 			font-size: 16px;
 			font-style: normal;
@@ -1072,12 +1101,6 @@
 				background-size: 100% 100%;
 			}
 		}
-
-		&-storage_map {
-			width: 700px;
-			height: 200px;
-		}
-
 	}
 	&__datewrapper {
 		display: flex;
@@ -1147,5 +1170,55 @@
 	.choices__list--dropdown .choices__item--selectable,
 	.choices__list[aria-expanded] .choices__item--selectable {
 		padding: 10px;
+	}
+}
+
+.order {
+	padding-bottom: 600px;
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		padding-top: 41px;
+		
+		
+	}
+	&__title {
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 130%;
+	}
+	&__docks {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 8px;
+		&-list {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 700px;
+			gap: 40px;
+		}
+		&-title {
+			padding-bottom: 40px;
+			padding-top: 52px;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+		}
+
+		&-item {
+			display: flex;
+			gap: 20px;
+		}
+
+		&-img {
+			width: 40px;
+			height: 40px;
+		}
+
+		&-name {
+			padding-top: 5px;
+		}
 	}
 }

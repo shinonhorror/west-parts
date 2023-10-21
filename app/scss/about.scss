@@ -1,0 +1,32 @@
+@import '__vars';
+@import '__reset';
+@import '__global';
+
+.about {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		padding-top: 100px;
+		padding-bottom: 170px;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 130%;
+	}
+
+	&__block {
+		display: flex;
+		gap: 40px;
+		&-img {
+			width: 699px;
+			height: 566px;
+		}
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+}
