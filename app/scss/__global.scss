@@ -1,4 +1,5 @@
 @import '__vars';
+@import '__reset';
 
 body {
 	font-family: 'Jost', sans-serif;
@@ -283,6 +284,7 @@ body {
 
 	&-container {
 		width: 1194px;
+		min-height: 236px;
 		padding-bottom: 110px;
 		display: flex;
 		flex-direction: column;
@@ -498,6 +500,29 @@ body {
 			background-color: $yellow;
 			border: none;
 			cursor: pointer;
+		}
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.container-fluid {
+		max-width: 1440px;
+	}
+	.container {
+		max-width: 1024px;
+	}
+	.header {
+		&__input {
+			width: 260px;
+			right: 140px;
+		}
+	}
+	.modal {
+		&-container {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			overflow-y: auto;
 		}
 	}
 }

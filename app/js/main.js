@@ -139,15 +139,23 @@ const activeCheckbox = () => {
 };
 
 const openModal = (classname, id) => {
+	const modals = document.querySelectorAll('.modal');
 	const account = document.querySelector(classname);
 	const modal = document.getElementById(id);
 	if (!modal || !account) {
 		return;
 	}
+
 	const container = document.querySelector('.modal-container');
 	const close = document.querySelector('.modal__close');
 	account.addEventListener('click', () => {
 		modal.classList.add('active');
+		modals.forEach((item) => {
+			console.log(item);
+			if (item.classList.contains('active') && item !== modal) {
+				item.classList.remove('active');
+			}
+		});
 	});
 
 	modal.addEventListener('click', (e) => {

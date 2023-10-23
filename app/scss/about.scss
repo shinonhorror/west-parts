@@ -1,5 +1,3 @@
-@import '__vars';
-@import '__reset';
 @import '__global';
 
 .about {
@@ -27,6 +25,17 @@
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.about {
+		&__block {
+			flex-direction: column;
+			&-img {
+				width: 100%;
+			}
 		}
 	}
 }

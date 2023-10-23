@@ -18,104 +18,144 @@
 			<modal class="modal" id="modal">
 				<div class="modal-container">
 					<button class="modal__close"></button>
-					<div class="modal__product">
-						<div class="modal__product-images">
-							<img
-								class="modal__product-main"
-								src="images/slider-1.png"
-								alt="main_image"
-							/>
-							<div class="modal__product-other">
-								<img
-									class="modal__product-other_img"
-									src="images/slider-1.png"
-									alt=""
-								/>
-								<img
-									class="modal__product-other_img"
-									src="images/slider-1.png"
-									alt=""
-								/>
-								<img
-									class="modal__product-other_img"
-									src="images/slider-1.png"
-									alt=""
-								/>
-							</div>
-						</div>
-						<div class="modal__product-info">
-							<h2 class="modal__product-title">
-								Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач, автобус)
-							</h2>
-							<div class="modal__product-desc">
-								<div class="modal__product-col">
-									<div class="modal__product-item">
-										<p class="modal__product-name">артикул:</p>
-										<p class="modal__product-name">154685431</p>
-									</div>
-									<div class="modal__product-item">
-										<p class="modal__product-name">бренд:</p>
-										<p class="modal__product-name">STELLOX</p>
-									</div>
-									<div class="modal__product-item">
-										<p class="modal__product-name">кол-во на слкде:</p>
-										<p class="modal__product-name">58</p>
-									</div>
-								</div>
-								<div class="modal__product-col">
-									<div class="modal__product-item">
-										<p class="modal__product-name">склад:</p>
-										<p class="modal__product-name">СПб Московское ш.</p>
-									</div>
-									<div class="modal__product-item">
-										<p class="modal__product-name">дата поставки:</p>
-										<p class="modal__product-name">28.09.2023</p>
-									</div>
-									<div class="modal__product-item">
-										<p class="modal__product-name">возврат:</p>
-										<p class="modal__product-name">14 дней</p>
-									</div>
-								</div>
-							</div>
-							<p class="modal__product-price">4555,80 руб.</p>
-							<button class="modal__product-add">в корзину</button>
-						</div>
-					</div>
+					<ul class="modal__tabs">
+						<li class="modal__tabs-item active">
+							<a href="" class="modal__tabs-link">регистрация</a>
+						</li>
+						<li class="modal__tabs-item">
+							<a href="" class="modal__tabs-link">авторизация</a>
+						</li>
+					</ul>
+					<div class="modal__tabs-panel active" data-index="0">
+						<form
+							class="modal__registration"
+							action="submit"
+							onsubmit="return false"
+						>
+							<div class="modal__registration-radiobuttons">
+								<label class="modal__registration-label"
+									><input
+										class="modal__registration-radio"
+										type="radio"
+										checked
+										name="business"
+										data-index="0"
+									/>
+									<span class="modal__registration-fake">физическое лицо</span>
+								</label>
 
-					<div class="modal__characteristic">
-						<div class="modal__characteristic-col">
-							<div class="modal__characteristic-item">
-								<p class="modal__characteristic-name">тип диска:</p>
-								<p class="modal__characteristic-desc">штампованный</p>
+								<label class="modal__registration-label"
+									><input
+										class="modal__registration-radio"
+										type="radio"
+										name="business"
+										data-index="1"
+									/><span class="modal__registration-fake"
+										>юридическое лицо</span
+									></label
+								>
 							</div>
-							<div class="modal__characteristic-item">
-								<p class="modal__characteristic-name">вылет, ЕТ мм:</p>
-								<p class="modal__characteristic-desc">175</p>
+							<div class="modal__registration-fields">
+								<div class="modal__registration-left">
+									<input
+										class="modal__registration-input"
+										type="text"
+										autocomplete="email"
+										placeholder="ФИО"
+										name="name"
+									/>
+									<input
+										class="modal__registration-input"
+										type="tel"
+										placeholder="телефон"
+										name="phone"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										autocomplete="email"
+										placeholder="Email"
+										name="email"
+									/>
+									<input
+										class="modal__registration-input"
+										type="text"
+										placeholder="город"
+										name="city"
+									/>
+								</div>
+								<div class="modal__registration-right">
+									<div class="modal__registration-panel active" data-index="0">
+										<textarea class="modal__registration-input" name="comment">
+комментарий</textarea
+										>
+									</div>
+									<div class="modal__registration-panel" data-index="1">
+										<input
+											class="modal__registration-input"
+											type="text"
+											placeholder="название компании"
+											name="company"
+										/>
+										<input
+											class="modal__registration-input"
+											type="text"
+											placeholder="ИНН"
+											name="INN"
+										/>
+										<textarea class="modal__registration-input" name="comment">
+комментарий</textarea
+										>
+									</div>
+								</div>
 							</div>
-							<div class="modal__characteristic-item">
-								<p class="modal__characteristic-name">ширина диска:</p>
-								<p class="modal__characteristic-desc">9</p>
-							</div>
-							<div class="modal__characteristic-item">
-								<p class="modal__characteristic-name">диаметр диска:</p>
-								<p class="modal__characteristic-desc">22,5</p>
-							</div>
-						</div>
-						<div class="modal__characteristic-col">
-							<div class="modal__characteristic-item">
-								<p class="modal__characteristic-name">гарантия:</p>
-								<p class="modal__characteristic-desc">1 год</p>
-							</div>
-							<div class="modal__characteristic-item">
-								<p class="modal__characteristic-name">вес в упаковке</p>
-								<p class="modal__characteristic-desc">175</p>
-							</div>
-							<div class="modal__characteristic-item">
-								<p class="modal__characteristic-name">количество в упаковке</p>
-								<p class="modal__characteristic-desc">1</p>
-							</div>
-						</div>
+							<label class="modal__registration-label"
+								><input
+									class="modal__registration-radio"
+									type="checkbox"
+									name="subscription"
+									checked
+								/><span class="modal__registration-fake"
+									>подписаться на рассылку</span
+								></label
+							>
+							<button class="modal__registration-button" type="submit">
+								зарегистрироваться
+							</button>
+						</form>
 					</div>
+					<div class="modal__tabs-panel" data-index="1">
+						<form
+							class="modal__authorization"
+							action="submit"
+							onsubmit="return false"
+						>
+							<input
+								class="modal__authorization-input"
+								type="text"
+								autocomplete="email"
+								placeholder="Email"
+							/>
+							<input
+								class="modal__authorization-input"
+								type="password"
+								placeholder="пароль"
+							/>
+							<button class="modal__authorization-button" type="submit">
+								<a href="acc-profile.html">войти</a>
+							</button>
+						</form>
+						<a href="#" class="modal__authorization-reset"
+							>восстановление пароля</a
+						>
+					</div>
+				</div>
+			</modal>
+
+			<modal class="modal" id="modal-info">
+				<div class="modal-container">
+					<button class="modal__close"></button>
+					<p>Спасибо за регистрацию, с вами свяжется наш менеджер.</p>
 				</div>
 			</modal>
 
@@ -169,7 +209,9 @@
 										<a href="contacts.html" class="menu__list-link">контакты</a>
 									</li>
 									<li class="menu__list-item">
-										<a href="tel:+79213103810" class="menu__list-link">+7 (921) 310-38-10</a>
+										<a href="tel:+79213103810" class="menu__list-link"
+											>+7 (921) 310-38-10</a
+										>
 									</li>
 								</ul>
 							</nav>
@@ -472,56 +514,61 @@
 										</div>
 									</div>
 								</div>
-								<div class='catalog__filter-button'>применить</div>
+								<div class="catalog__filter-button">применить</div>
 							</div>
 							<div class="catalog__page">
-								<table class="catalog__table">
-									<tr class="catalog__table-headrow">
-										<th class="catalog__table-headitem">артикул</th>
-										<th class="catalog__table-headitem">название</th>
-										<th class="catalog__table-headitem">склад</th>
-										<th class="catalog__table-headitem">количество</th>
-										<th class="catalog__table-headitem"></th>
-									</tr>
-									<tr class="catalog__table-row">
-										<td class="catalog__table-item">548465316</td>
-										<td class="catalog__table-item">
-											Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач,
-											автобус)Диск колёсный 22.5x9.0, 10x335, ET175, D281
-											(тягач, автобус)
-										</td>
-
-										<td class="catalog__table-item">
-											<div class="catalog__table-storage">
-												<div class="catalog__table-storage_city">
-													СПБ Московское ш.
-												</div>
-											</div>
-										</td>
-										<td class="catalog__table-item">58</td>
-										<td class="catalog__table-item">
-											<button class="catalog__table-button">узнать цену</button>
-										</td>
-									</tr>
+								<div class="catalog__table-outer">
+									<table class="catalog__table">
+										<tr class="catalog__table-headrow">
+											<th class="catalog__table-headitem">артикул</th>
+											<th class="catalog__table-headitem">название</th>
+											<th class="catalog__table-headitem">склад</th>
+											<th class="catalog__table-headitem">количество</th>
+											<th class="catalog__table-headitem"></th>
+										</tr>
 										<tr class="catalog__table-row">
-										<td class="catalog__table-item">548465316</td>
-										<td class="catalog__table-item">
-											Диск колёсный 
-										</td>
+											<td class="catalog__table-item">548465316</td>
+											<td class="catalog__table-item">
+												Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач,
+												автобус)Диск колёсный 22.5x9.0, 10x335, ET175, D281
+												(тягач, автобус)
+											</td>
 
-										<td class="catalog__table-item">
-											<div class="catalog__table-storage">
-												<div class="catalog__table-storage_city">
-													СПБ Московское ш.
+											<td class="catalog__table-item">
+												<div class="catalog__table-storage">
+													<div class="catalog__table-storage_city">
+														СПБ Московское ш.
+													</div>
 												</div>
-											</div>
-										</td>
-										<td class="catalog__table-item">58</td>
-										<td class="catalog__table-item">
-											<button class="catalog__table-button">узнать цену</button>
-										</td>
-									</tr>
-								</table>
+											</td>
+											<td class="catalog__table-item">58</td>
+											<td class="catalog__table-item">
+												<button class="catalog__table-button">
+													узнать цену
+												</button>
+											</td>
+										</tr>
+										<tr class="catalog__table-row">
+											<td class="catalog__table-item">548465316</td>
+											<td class="catalog__table-item">Диск колёсный</td>
+
+											<td class="catalog__table-item">
+												<div class="catalog__table-storage">
+													<div class="catalog__table-storage_city">
+														СПБ Московское ш.
+													</div>
+												</div>
+											</td>
+											<td class="catalog__table-item">58</td>
+											<td class="catalog__table-item">
+												<button class="catalog__table-button">
+													узнать цену
+												</button>
+											</td>
+										</tr>
+									</table>
+								</div>
+
 								<div class="catalog__pagination">
 									<button class="catalog__pagination-backward"><</button>
 									<ul class="catalog__pagination-list">
@@ -579,7 +626,9 @@
 						<nav class="footer__menu">
 							<ul class="footer__list">
 								<li class="footer__list-item">
-									<a href="tel:+79213103810" class="footer__list-link">+7 (921) 310-38-10 </a>
+									<a href="tel:+79213103810" class="footer__list-link"
+										>+7 (921) 310-38-10
+									</a>
 								</li>
 								<li class="footer__list-item">
 									<a href="#" class="footer__list-link">office@w-part.ru</a>
@@ -593,7 +642,8 @@
 
 		<script type="text/javascript" src="js/main.min.js"></script>
 		<script>
-			openModal('.catalog__table-row', 'modal');
+			openModal('.header__buttons-account', 'modal');
+			openModal('.modal__registration-button', 'modal-info');
 			activateButtons();
 			rangeTooltip();
 		</script>
