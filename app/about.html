@@ -148,7 +148,7 @@
 				<div class="container">
 					<div class="header__inner">
 						<a href="index.html" class="logo"
-							><img src="images/logo_black.svg" alt="logo"
+							><img class="header__logo" src="images/logo_black.svg" alt="logo"
 						/></a>
 						<div class="header__city">
 							<p class="header__city-text">Ваш город</p>
@@ -170,6 +170,22 @@
 							<a href="#" class="header__buttons-account">
 								<img src="images/account.svg" alt="account" />
 							</a>
+							<a href="#" class="header__buttons-phone">
+								<img src="images/call.svg" alt="phone"
+							/></a>
+							<a href="#" class="header__buttons-location">
+								<img src="images/location.svg" alt="location"
+							/></a>
+							<button class="header__buttons-menu">
+								<img src="images/menu-mobile.svg" alt="menu" />
+								<div id="dropdown" class="header__dropdown">
+									<a class="header__dropdown-link" href="catalog.html">купить</a>
+									<a class="header__dropdown-link" href="about.html">о компании</a>
+									<a class="header__dropdown-link" href="delivery.html"
+										>доставка и оплата</a
+									><a class="header__dropdown-link" href="contacts.html">контакты</a>
+								</div>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -194,10 +210,20 @@
 										<a href="contacts.html" class="menu__list-link">контакты</a>
 									</li>
 									<li class="menu__list-item">
-										<a href="tel:+79213103810" class="menu__list-link">+7 (921) 310-38-10</a>
+										<a href="tel:+79213103810" class="menu__list-link"
+											>+7 (921) 310-38-10</a
+										>
 									</li>
 								</ul>
 							</nav>
+							<div class="navigation__search">
+								<input
+									class="navigation__search-input"
+									placeholder="поиск по артикулу"
+									type="text"
+								/>
+								<button class="navigation__search-button">найти</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -310,7 +336,7 @@
 				</section>
 			</main>
 
-			<footer class="footer">
+				<footer class="footer">
 				<div class="container">
 					<div class="footer__inner">
 						<div class="footer__logo">
@@ -328,7 +354,9 @@
 									<a href="#" class="footer__list-link">каталог</a>
 								</li>
 								<li class="footer__list-item">
-									<a href="delivery.html" class="footer__list-link">доставка и оплата</a>
+									<a href="delivery.html" class="footer__list-link"
+										>доставка и оплата</a
+									>
 								</li>
 							</ul>
 						</nav>
@@ -348,13 +376,61 @@
 						<nav class="footer__menu">
 							<ul class="footer__list">
 								<li class="footer__list-item">
-									<a href="#" class="footer__list-link">+7 (921) 310-38-10 </a>
+									<a href="tel:+79213103810" class="footer__list-link"
+										>+7 (921) 310-38-10
+									</a>
 								</li>
 								<li class="footer__list-item">
 									<a href="#" class="footer__list-link">office@w-part.ru</a>
 								</li>
 							</ul>
 						</nav>
+					</div>
+					<div class="footer__inner-mobile">
+						<div class="footer__info">
+							<a href="#" class="footer__logo-img"
+								><img src="images/logo_black.svg" alt="logo"
+							/></a>
+							<div class="footer__info-content">
+								<p class="footer__info-phone">+7 921 310-38-10</p>
+								<p class="footer__info-email">office@w-part.ru</p>
+							</div>
+						</div>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="about.html" class="footer__list-link">о компании</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">личный кабинет</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="delivery.html" class="footer__list-link"
+										>доставка и оплата</a
+									>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link"
+										>политика конфиденциальности</a
+									>
+								</li>
+							</ul>
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="catalog.html" class="footer__list-link">каталог</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="news.html" class="footer__list-link">новости</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">бренды</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="contacts.html" class="footer__list-link">контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<p class="footer__logo-copyright">© 2023 Автозапчасти</p>
 					</div>
 				</div>
 			</footer>
@@ -366,6 +442,7 @@
 		<script type="text/javascript" src="js/main.min.js"></script>
 		<script>
 			openModal('.header__buttons-account', 'modal');
+			toggleDropdown('.header__buttons-menu', 'dropdown')
 		</script>
 	</body>
 </html>

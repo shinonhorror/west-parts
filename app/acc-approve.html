@@ -156,12 +156,46 @@
 									<span class="header__info-highlight">Отсрочка:</span> 5 дней
 								</p>
 							</div>
+							<a href="#" class="header__buttons-location">
+								<img src="images/location.svg" alt="location"
+							/></a>
 							<a href="acc-cart.html" class="header__buttons-cart">
 								<img src="images/cart.svg" alt="cart" />
 							</a>
-							<a href="#" class="header__buttons-account">
+							<div class="header__buttons-account">
 								<img src="images/account.svg" alt="account" />
-							</a>
+								<div id="dropdown" class="header-profile__dropdown">
+									<div class="header-profile__dropdown-info">
+										<p class="header-profile__dropdown-credit">
+											ООО “Компания”, 196084, г. Санкт-Петербург, Набережная
+											Обводного канала, Д.92 ЛИТ.А, офис 215
+										</p>
+										<p class="header-profile__dropdown-credit">
+											<span class="header__info-highlight">Лимит кредита:</span>
+											200 000 руб.
+										</p>
+										<p>
+											<span class="header__info-highlight"
+												>Остаток кредита:</span
+											>
+											200 000 руб.
+										</p>
+										<p class="header-profile__dropdown-credit">
+											<span class="header__info-highlight">Отсрочка:</span> 5
+											дней
+										</p>
+									</div>
+									<a
+										class="header-profile__dropdown-link"
+										href="acc-profile.html"
+										>настройки аккаунта</a
+									>
+									<a class="header-profile__dropdown-link" href="#"
+										>о сменить пользователя</a
+									>
+									<a class="header-profile__dropdown-link" href="#">выйти</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -172,10 +206,10 @@
 							<nav class="accountmenu">
 								<ul class="accountmenu__list">
 									<li class="accountmenu__list-item">
-										<a href="acc-cart.html" class="accountmenu__list-link"
+										<a href="acc-catalog.html" class="accountmenu__list-link"
 											><img
 												src="images/profile/catalogs.svg"
-												alt="carts-active"
+												alt="catalogs-active"
 											/>
 											интернет-магазин</a
 										>
@@ -184,16 +218,16 @@
 										<a href="acc-orders.html" class="accountmenu__list-link"
 											><img
 												src="images/profile/orders.svg"
-												alt="carts-active"
+												alt="catalogs-active"
 											/>
 											заказы и возвраты</a
 										>
 									</li>
 									<li class="accountmenu__list-item">
-										<a href="cart.html" class="accountmenu__list-link"
+										<a href="catalog.html" class="accountmenu__list-link"
 											><img
 												src="images/profile/finance.svg"
-												alt="carts-active"
+												alt="catalogs-active"
 											/>
 											финансы</a
 										>
@@ -204,7 +238,6 @@
 					</div>
 				</div>
 			</header>
-
 			<main class="main">
 				<section class="manage">
 					<div class="container">
@@ -377,6 +410,52 @@
 							</ul>
 						</nav>
 					</div>
+					<div class="footer__inner-mobile">
+						<div class="footer__info">
+							<a href="#" class="footer__logo-img"
+								><img src="images/logo_black.svg" alt="logo"
+							/></a>
+							<div class="footer__info-content">
+								<p class="footer__info-phone">+7 921 310-38-10</p>
+								<p class="footer__info-email">office@w-part.ru</p>
+							</div>
+						</div>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="about.html" class="footer__list-link">о компании</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">личный кабинет</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="delivery.html" class="footer__list-link"
+										>доставка и оплата</a
+									>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link"
+										>политика конфиденциальности</a
+									>
+								</li>
+							</ul>
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="catalog.html" class="footer__list-link">каталог</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="news.html" class="footer__list-link">новости</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">бренды</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="contacts.html" class="footer__list-link">контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<p class="footer__logo-copyright">© 2023 Автозапчасти</p>
+					</div>
 				</div>
 			</footer>
 		</div>
@@ -385,6 +464,7 @@
 		<script>
 			openModal('.cart__table-image-item', 'modal');
 			openModal('.cart__buttons-approve', 'modal-info');
+			toggleDropdown('.header__buttons-account', 'dropdown');
 		</script>
 	</body>
 </html>

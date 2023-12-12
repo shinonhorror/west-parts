@@ -119,6 +119,228 @@
 				</div>
 			</modal>
 
+			<modal class="modal" id="modal-filter">
+				<div class="modal-container">
+					<button class="modal__close"></button>
+					<div class="catalog__filter-modal">
+						<div class="catalog__filter-toggle">
+							<button
+								class="catalog__filter-toggle_button"
+								aria-expanded="true"
+							>
+								цена
+								<img src="images/profile/toggle.svg" alt="" focusable="false" />
+							</button>
+							<div class="catalog__filter-toggle_content">
+								<div class="catalog__filter-price">
+									<p class="catalog__filter-price_desc">от</p>
+									<input type="text" class="catalog__filter-price_input" />
+									<p class="catalog__filter-price_desc">до</p>
+									<input type="text" class="catalog__filter-price_input" />
+								</div>
+							</div>
+						</div>
+						<div class="catalog__filter-toggle">
+							<button
+								class="catalog__filter-toggle_button"
+								aria-expanded="true"
+							>
+								срок поставки
+								<img src="images/profile/toggle.svg" alt="" focusable="false" />
+							</button>
+							<div class="catalog__filter-toggle_content">
+								<div class="catalog__filter-estimate">
+									<div class="catalog__filter-ranger">
+										<div class="catalog__filter-value"></div>
+										<input
+											class="catalog__filter-input"
+											type="range"
+											value="50"
+											min="1"
+											max="50"
+											data-condition="дней"
+											step="1"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="catalog__filter-toggle">
+							<button
+								class="catalog__filter-toggle_button"
+								aria-expanded="true"
+							>
+								вероятность поставки
+								<img src="images/profile/toggle.svg" alt="" focusable="false" />
+							</button>
+							<div class="catalog__filter-toggle_content">
+								<div class="catalog__filter-probability">
+									<div class="catalog__filter-ranger">
+										<div class="catalog__filter-value"></div>
+										<input
+											class="catalog__filter-input"
+											type="range"
+											value="100"
+											data-condition="%"
+											min="0"
+											max="100"
+											step="1"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="catalog__filter-toggle">
+							<button
+								class="catalog__filter-toggle_button"
+								aria-expanded="true"
+							>
+								пункт выдачи
+								<img src="images/profile/toggle.svg" alt="" focusable="false" />
+							</button>
+							<div class="catalog__filter-toggle_content">
+								<div class="catalog__filter-give">
+									<label class="catalog__filter-give_label"
+										><input
+											class="catalog__filter-give_radio"
+											type="checkbox"
+											name="give"
+											data-index="0"
+										/>
+										<span class="catalog__filter-give_fake">не выбран</span>
+									</label>
+									<label class="catalog__filter-give_label"
+										><input
+											class="catalog__filter-give_radio"
+											type="checkbox"
+											name="give"
+											data-index="1"
+										/>
+										<span class="catalog__filter-give_fake">не выбран</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="catalog__filter-toggle">
+							<button
+								class="catalog__filter-toggle_button"
+								aria-expanded="true"
+							>
+								склад
+								<img src="images/profile/toggle.svg" alt="" focusable="false" />
+							</button>
+							<div class="catalog__filter-toggle_content">
+								<div class="catalog__filter-storage">
+									<label class="catalog__filter-storage_label"
+										><input
+											class="catalog__filter-storage_radio"
+											type="checkbox"
+											name="storage"
+											data-index="0"
+										/>
+										<span class="catalog__filter-storage_fake"
+											>СПб Московское ш.</span
+										>
+									</label>
+									<label class="catalog__filter-storage_label"
+										><input
+											class="catalog__filter-storage_radio"
+											type="checkbox"
+											name="storage"
+											data-index="1"
+										/>
+										<span class="catalog__filter-storage_fake"
+											>Краснодар, ул. Уральская</span
+										>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="catalog__filter-toggle">
+							<button
+								class="catalog__filter-toggle_button"
+								aria-expanded="true"
+							>
+								фото
+								<img src="images/profile/toggle.svg" alt="" focusable="false" />
+							</button>
+							<div class="catalog__filter-toggle_content">
+								<div class="catalog__filter-photo">
+									<label class="catalog__filter-photo_label"
+										><input
+											class="catalog__filter-photo_radio"
+											type="checkbox"
+											name="photo"
+											data-index="0"
+										/>
+										<span class="catalog__filter-storage_fake">с фото</span>
+									</label>
+									<label class="catalog__filter-photo_label"
+										><input
+											class="catalog__filter-photo_radio"
+											type="checkbox"
+											name="photo"
+											data-index="1"
+										/>
+										<span class="catalog__filter-photo_fake">без фото</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="catalog__filter-toggle">
+							<button
+								class="catalog__filter-toggle_button"
+								aria-expanded="true"
+							>
+								бренд
+								<img src="images/profile/toggle.svg" alt="" focusable="false" />
+							</button>
+							<div class="catalog__filter-toggle_content">
+								<div class="catalog__filter-brand">
+									<label class="catalog__filter-brand_label"
+										><input
+											class="catalog__filter-brand_radio"
+											type="checkbox"
+											name="brand"
+											data-index="0"
+										/>
+										<span class="catalog__filter-brand_fake">ACERBI</span>
+									</label>
+									<label class="catalog__filter-brand_label"
+										><input
+											class="catalog__filter-brand_radio"
+											type="checkbox"
+											name="brand"
+											data-index="1"
+										/>
+										<span class="catalog__filter-brand_fake">AIRFREN</span>
+									</label>
+									<label class="catalog__filter-brand_label"
+										><input
+											class="catalog__filter-brand_radio"
+											type="checkbox"
+											name="brand"
+											data-index="2"
+										/>
+										<span class="catalog__filter-brand_fake">ALFACAR</span>
+									</label>
+									<label class="catalog__filter-brand_label"
+										><input
+											class="catalog__filter-brand_radio"
+											type="checkbox"
+											name="brand"
+											data-index="3"
+										/>
+										<span class="catalog__filter-brand_fake">ASK</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<button class="catalog__filter-button">применить</button>
+					</div>
+				</div>
+			</modal>
+
 			<header class="header">
 				<div class="container">
 					<div class="header__inner">
@@ -149,12 +371,46 @@
 									<span class="header__info-highlight">Отсрочка:</span> 5 дней
 								</p>
 							</div>
+							<a href="#" class="header__buttons-location">
+								<img src="images/location.svg" alt="location"
+							/></a>
 							<a href="acc-cart.html" class="header__buttons-cart">
 								<img src="images/cart.svg" alt="cart" />
 							</a>
-							<a href="#" class="header__buttons-account">
+							<div class="header__buttons-account">
 								<img src="images/account.svg" alt="account" />
-							</a>
+								<div id="dropdown" class="header-profile__dropdown">
+									<div class="header-profile__dropdown-info">
+										<p class="header-profile__dropdown-credit">
+											ООО “Компания”, 196084, г. Санкт-Петербург, Набережная
+											Обводного канала, Д.92 ЛИТ.А, офис 215
+										</p>
+										<p class="header-profile__dropdown-credit">
+											<span class="header__info-highlight">Лимит кредита:</span>
+											200 000 руб.
+										</p>
+										<p>
+											<span class="header__info-highlight"
+												>Остаток кредита:</span
+											>
+											200 000 руб.
+										</p>
+										<p class="header-profile__dropdown-credit">
+											<span class="header__info-highlight">Отсрочка:</span> 5
+											дней
+										</p>
+									</div>
+									<a
+										class="header-profile__dropdown-link"
+										href="acc-profile.html"
+										>настройки аккаунта</a
+									>
+									<a class="header-profile__dropdown-link" href="#"
+										>о сменить пользователя</a
+									>
+									<a class="header-profile__dropdown-link" href="#">выйти</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -165,9 +421,7 @@
 							<nav class="accountmenu">
 								<ul class="accountmenu__list">
 									<li class="accountmenu__list-item">
-										<a
-											href="acc-catalog.html"
-											class="accountmenu__list-link active"
+										<a href="acc-catalog.html" class="accountmenu__list-link"
 											><img
 												src="images/profile/catalogs.svg"
 												alt="catalogs-active"
@@ -593,6 +847,21 @@
 											</label>
 										</div>
 									</div>
+									<button class="catalog__filter-button">применить</button>
+								</div>
+							</div>
+							<div class="catalog__mobile-filter">
+								<div class="catalog__mobile-filter_main">
+									<img src="images/profile/filter/main.svg" alt="lower" />
+									<p>фильтры</p>
+								</div>
+								<div class="catalog__mobile-filter_item active">
+									<img src="images/profile/filter/lower.svg" alt="lower" />
+									<p>дешевле</p>
+								</div>
+								<div class="catalog__mobile-filter_item">
+									<img src="images/profile/filter/higher.svg" alt="higher" />
+									<p>дороже</p>
 								</div>
 							</div>
 							<div class="catalog__page">
@@ -732,13 +1001,61 @@
 							</ul>
 						</nav>
 					</div>
+					<div class="footer__inner-mobile">
+						<div class="footer__info">
+							<a href="#" class="footer__logo-img"
+								><img src="images/logo_black.svg" alt="logo"
+							/></a>
+							<div class="footer__info-content">
+								<p class="footer__info-phone">+7 921 310-38-10</p>
+								<p class="footer__info-email">office@w-part.ru</p>
+							</div>
+						</div>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="about.html" class="footer__list-link">о компании</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">личный кабинет</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="delivery.html" class="footer__list-link"
+										>доставка и оплата</a
+									>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link"
+										>политика конфиденциальности</a
+									>
+								</li>
+							</ul>
+							<ul class="footer__list">
+								<li class="footer__list-item">
+									<a href="catalog.html" class="footer__list-link">каталог</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="news.html" class="footer__list-link">новости</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="#" class="footer__list-link">бренды</a>
+								</li>
+								<li class="footer__list-item">
+									<a href="contacts.html" class="footer__list-link">контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<p class="footer__logo-copyright">© 2023 Автозапчасти</p>
+					</div>
 				</div>
 			</footer>
 		</div>
 
 		<script type="text/javascript" src="js/main.min.js"></script>
 		<script>
+			openModal('.catalog__mobile-filter_main', 'modal-filter');
 			openModal('.catalog__table-row', 'modal');
+			toggleDropdown('.header__buttons-account', 'dropdown');
 			activateButtons();
 			rangeTooltip();
 		</script>
