@@ -146,12 +146,13 @@ const openModal = (classname, id) => {
 		return;
 	}
 
-	const container = document.querySelector('.modal-container');
-	const close = document.querySelector('.modal__close');
+	const container = modal.querySelector('.modal-container');
+	const close = modal.querySelector('.modal__close');
+
 	account.addEventListener('click', () => {
 		modal.classList.add('active');
+		document.body.style.overflow = 'hidden';
 		modals.forEach((item) => {
-			console.log(item);
 			if (item.classList.contains('active') && item !== modal) {
 				item.classList.remove('active');
 			}
@@ -163,11 +164,13 @@ const openModal = (classname, id) => {
 
 		if (!withinBoundaries) {
 			modal.classList.remove('active');
+			document.body.style.overflow = '';
 		}
 	});
 
 	close.addEventListener('click', () => {
 		modal.classList.remove('active');
+		document.body.style.overflow = '';
 	});
 
 	activeCheckbox();
@@ -182,7 +185,7 @@ const toggleList = () => {
 
 		btn.addEventListener('click', () => {
 			let expanded = btn.getAttribute('aria-expanded') === 'true' || false;
-			console.log(expanded);
+
 			btn.setAttribute('aria-expanded', !expanded);
 
 			content.hidden = expanded;
@@ -206,6 +209,26 @@ const rangeTooltip = () => {
 
 			value.style.left = `calc(${newValue}% + (${newPosition}px))`;
 		});
+	});
+};
+
+const toggleDropdown = (classname, id) => {
+	const dropdownButton = document.querySelector(classname);
+	const dropdown = document.getElementById(id);
+
+	dropdownButton.addEventListener('click', (e) => {
+		dropdown.classList.toggle('show');
+		console.log(dropdown);
+	});
+
+	document.addEventListener('click', (e) => {
+		const withinBoundaries =
+			e.composedPath().includes(dropdown) ||
+			e.composedPath().includes(dropdownButton);
+
+		if (!withinBoundaries) {
+			dropdown.classList.remove('show');
+		}
 	});
 };
 

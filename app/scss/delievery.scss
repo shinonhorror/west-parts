@@ -1,12 +1,13 @@
 @import '__global';
 
 .main {
-  margin-bottom: 200px;
+	margin-bottom: 200px;
 }
 
-.delivery, .payment {
+.delivery,
+.payment {
 	margin-top: 57px;
-  margin-bottom: 106px;
+	margin-bottom: 106px;
 	&__inner {
 		display: flex;
 		gap: 109px;
@@ -18,7 +19,7 @@
 	&__about {
 		display: flex;
 		flex-direction: column;
-    gap: 35px;
+		gap: 35px;
 		&-title {
 			margin-top: 31px;
 			font-size: 34px;
@@ -31,6 +32,56 @@
 			font-style: normal;
 			font-weight: 400;
 			line-height: 130%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.main {
+		margin-bottom: 100px;
+	}
+
+	.delivery,
+	.payment {
+		margin-top: 0;
+		margin-bottom: 20px;
+		&__inner {
+			display: flex;
+			gap: 50px;
+		}
+		&__image {
+			width: 130px;
+			height: 130px;
+		}
+		&__about {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			&-title {
+				font-size: 18px;
+			}
+			&-content {
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.delivery,
+	.payment {
+		&__inner {
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+		}
+		&__image {
+			align-self: center;
+		}
+		&__about {
+			&-title {
+				margin-top: 10px;
+			}
 		}
 	}
 }
