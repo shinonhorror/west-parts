@@ -91,32 +91,6 @@ if (document.getElementById('map')) {
 	});
 }
 
-if (document.getElementById('moskowStorage')) {
-	ymaps.ready(function () {
-		new ymaps.Map('moskowStorage', {
-			center: [59.90862, 30.32179],
-			zoom: 16,
-			controls: [],
-		});
-	});
-
-	ymaps.ready(function () {
-		new ymaps.Map('spbStorage', {
-			center: [59.90862, 30.32179],
-			zoom: 16,
-			controls: [],
-		});
-	});
-
-	ymaps.ready(function () {
-		new ymaps.Map('krasnodarStorage', {
-			center: [59.90862, 30.32179],
-			zoom: 16,
-			controls: [],
-		});
-	});
-}
-
 const activeCheckbox = () => {
 	const checkboxes = document.querySelectorAll('.modal__registration-radio');
 	const panels = document.querySelectorAll('.modal__registration-panel');
@@ -236,6 +210,7 @@ const activateButtons = () => {
 	const searchButtons = document.querySelectorAll('.search__buttons-item');
 	const categoriesButtons = document.querySelectorAll('.categories__list-item');
 	const sortButtons = document.querySelectorAll('.catalog__filter-sort_item');
+	const mobileSort = document.querySelectorAll('.catalog__mobile-filter_item');
 	const paginationButtons = document.querySelectorAll(
 		'.catalog__pagination-item',
 	);
@@ -277,6 +252,23 @@ const activateButtons = () => {
 		item.removeEventListener('click', () => {
 			const active = document.querySelector(
 				'.catalog__filter-sort_item.active',
+			);
+			item.classList.add('active');
+			active.classList.remove('active');
+		});
+	});
+
+	mobileSort.forEach((item) => {
+		item.addEventListener('click', () => {
+			const active = document.querySelector(
+				'.catalog__mobile-filter_item.active',
+			);
+			item.classList.add('active');
+			active.classList.remove('active');
+		});
+		item.removeEventListener('click', () => {
+			const active = document.querySelector(
+				'.catalog__mobile-filter_item.active',
 			);
 			item.classList.add('active');
 			active.classList.remove('active');

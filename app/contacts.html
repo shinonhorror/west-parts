@@ -12,6 +12,10 @@
 		/>
 		<link rel="stylesheet" href="css/contacts.css" />
 		<link rel="stylesheet" href="css/choices.min.css" />
+		<script
+			src="https://yandex.st/jquery/2.2.3/jquery.min.js"
+			type="text/javascript"
+		></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -179,11 +183,17 @@
 							<button class="header__buttons-menu">
 								<img src="images/menu-mobile.svg" alt="menu" />
 								<div id="dropdown" class="header__dropdown">
-									<a class="header__dropdown-link" href="catalog.html">купить</a>
-									<a class="header__dropdown-link" href="about.html">о компании</a>
+									<a class="header__dropdown-link" href="catalog.html"
+										>купить</a
+									>
+									<a class="header__dropdown-link" href="about.html"
+										>о компании</a
+									>
 									<a class="header__dropdown-link" href="delivery.html"
 										>доставка и оплата</a
-									><a class="header__dropdown-link" href="contacts.html">контакты</a>
+									><a class="header__dropdown-link" href="contacts.html"
+										>контакты</a
+									>
 								</div>
 							</button>
 						</div>
@@ -230,39 +240,45 @@
 			</header>
 
 			<main class="main">
-				<section class="maps">
+				<section class="contacts">
 					<div class="container">
-						<div class="maps__inner">
-							<div class="maps__info">
-								<div class="maps__info-map" id="moskowStorage"></div>
-								<div class="maps__info-desc">
-									<div class="maps__info-title">Склад в Москве</div>
-									<p class="maps__info-address">Колпинское ш., д 135</p>
-									<p class="maps__info-phone">+7 (921) 333-35-10</p>
+						<div class="contacts__inner">
+							<h2 class="contacts__title">Напишите нам</h2>
+							<div class="contacts__wrapper">
+								<div class="contacts__form">
+									<input
+										class="contacts__form-input"
+										type="text"
+										name="name"
+										placeholder="Имя"
+									/>
+									<input
+										class="contacts__form-input"
+										type="text"
+										name="email"
+										placeholder="Email"
+									/>
+									<input
+										class="contacts__form-input"
+										type="tel"
+										name="phone"
+										placeholder="Телефон"
+									/>
+									<textarea
+										class="contacts__form-input"
+										name="comment"
+										placeholder="Сообщение"
+									></textarea>
+									<button class="contacts__form-button">отправить</button>
 								</div>
-							</div>
-							<div class="maps__info">
-								<div class="maps__info-map" id="spbStorage"></div>
-								<div class="maps__info-desc">
-									<div class="maps__info-title">Склад в Санкт-Петербурге</div>
-									<p class="maps__info-address">Колпинское ш., д 135</p>
-									<p class="maps__info-phone">+7 (921) 333-35-10</p>
-								</div>
-							</div>
-							<div class="maps__info">
-								<div class="maps__info-map" id="krasnodarStorage"></div>
-								<div class="maps__info-desc">
-									<div class="maps__info-title">Склад в Краснодаре</div>
-									<p class="maps__info-address">ул. Уральская, д. 144</p>
-									<p class="maps__info-phone">+7 (921) 310-38-10</p>
-								</div>
+								<div class="contacts__map" id="contact-map"></div>
 							</div>
 						</div>
 					</div>
 				</section>
 			</main>
 
-				<footer class="footer">
+			<footer class="footer">
 				<div class="container">
 					<div class="footer__inner">
 						<div class="footer__logo">
@@ -361,13 +377,211 @@
 				</div>
 			</footer>
 		</div>
-
 		<script
 			src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
 			type="text/javascript"
 		></script>
 		<script type="text/javascript" src="js/main.min.js"></script>
 		<script>
+			ymaps.ready(function () {
+				let contacts = new ymaps.Map('contact-map', {
+					center: [55.755793, 37.617134],
+					zoom: 4,
+					controls: [],
+				});
+
+				ListBoxLayout = ymaps.templateLayoutFactory.createClass(
+					"<button class='contacts__map-toggle' id='my-listbox-header' class='btn btn-success dropdown-toggle' data-toggle='dropdown'>" +
+						"{{data.title}} <img class='caret' src='images/profile/toggle.svg'></img>" +
+						'</button>' +
+						"<ul class='contacts__map-list' id='my-listbox'" +
+						" class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu'" +
+						" style='display: {% if state.expanded %}block{% else %}none{% endif %};'></ul>",
+					{
+						build: function () {
+							ListBoxLayout.superclass.build.call(this);
+
+							this.childContainerElement = $('#my-listbox').get(0);
+							this.events.fire('childcontainerchange', {
+								newChildContainerElement: this.childContainerElement,
+								oldChildContainerElement: null,
+							});
+						},
+
+						getChildContainerElement: function () {
+							return this.childContainerElement;
+						},
+
+						clear: function () {
+							this.events.fire('childcontainerchange', {
+								newChildContainerElement: null,
+								oldChildContainerElement: this.childContainerElement,
+							});
+							this.childContainerElement = null;
+							ListBoxLayout.superclass.clear.call(this);
+						},
+					},
+				);
+
+				ListBoxItemLayout = ymaps.templateLayoutFactory.createClass(
+					"<li class='contacts__map-item'><a>{{data.content}}</a></li>",
+				);
+
+				listBoxItems = [
+					new ymaps.control.ListBoxItem({
+						data: {
+							content: 'Москва',
+							center: [55.755864, 37.617698],
+							zoom: 9,
+						},
+					}),
+					new ymaps.control.ListBoxItem({
+						data: {
+							content: 'Санкт-Петербург',
+							center: [59.938784, 30.314997],
+							zoom: 9,
+						},
+					}),
+					new ymaps.control.ListBoxItem({
+						data: {
+							content: 'Краснодар',
+							center: [45.03547, 38.975313],
+							zoom: 9,
+						},
+					}),
+					new ymaps.control.ListBoxItem({
+						data: {
+							content: 'Волгоград',
+							center: [48.707067, 44.516975],
+							zoom: 9,
+						},
+					}),
+				];
+
+				listBox = new ymaps.control.ListBox({
+					items: listBoxItems,
+					data: {
+						title: 'Выберите город',
+					},
+					options: {
+						layout: ListBoxLayout,
+						itemLayout: ListBoxItemLayout,
+					},
+				});
+
+				let collection = new ymaps.GeoObjectCollection(null, {});
+
+				collection
+					.add(
+						new ymaps.Placemark(
+							[59.908642, 30.32204],
+							{
+								balloonContentBody: [
+									'<address>',
+									'<strong>Санкт-Петербург</strong>',
+									'<br/>',
+									'Адрес: Обводный канал, 92',
+									'<br/>',
+									'пн–пт 09:00 – 18:00',
+									'<br/>',
+									'Телефон: <a href="tel:79213333510">+7 (921) 333-35-10</a>',
+									'</address>',
+								].join(''),
+							},
+							{
+								iconLayout: 'default#image',
+								iconImageHref: 'images/office.svg',
+								iconImageSize: [32, 32],
+							},
+						),
+					)
+					.add(
+						new ymaps.Placemark(
+							[59.745721, 30.52037],
+							{
+								balloonContentBody: [
+									'<address>',
+									'<strong>Санкт-Петербург</strong>',
+									'<br/>',
+									'Адрес: Колпинское шоссе, 135',
+									'<br/>',
+									'пн–пт 09:00 – 18:00',
+									'<br/>',
+									'Телефон: <a href="tel:79213333510">+7 (921) 333-35-10</a>',
+									'</address>',
+								].join(''),
+							},
+							{
+								iconLayout: 'default#image',
+								iconImageHref: 'images/store.svg',
+								iconImageSize: [32, 32],
+							},
+						),
+					)
+					.add(
+						new ymaps.Placemark(
+							[45.037012, 39.083838],
+							{
+								balloonContentBody: [
+									'<address>',
+									'<strong>Краснодар</strong>',
+									'<br/>',
+									'Адрес: Уральская улица, 144',
+									'<br/>',
+									'пн–пт 09:00 – 18:00',
+									'<br/>',
+									'Телефон: <a href="tel:79213333510">+7 (921) 333-35-10</a>',
+									'</address>',
+								].join(''),
+							},
+							{
+								iconLayout: 'default#image',
+								iconImageHref: 'images/store.svg',
+								iconImageSize: [32, 32],
+							},
+						),
+					)
+					.add(
+						new ymaps.Placemark(
+							[55.813566, 37.766854],
+							{
+								balloonContentBody: [
+									'<address>',
+									'<strong>Москва</strong>',
+									'<br/>',
+									'Адрес: 2-й Иртышский проезд, 8с6',
+									'<br/>',
+									'пн–пт 09:00 – 18:00',
+									'<br/>',
+									'Телефон: <a href="tel:79213333510">+7 (921) 333-35-10</a>',
+									'</address>',
+								].join(''),
+							},
+							{
+								iconLayout: 'default#image',
+								iconImageHref: 'images/store.svg',
+								iconImageSize: [32, 32],
+							},
+						),
+					);
+
+				listBox.events.add('click', function (e) {
+					var item = e.get('target');
+					if (item != listBox) {
+						contacts.setCenter(item.data.get('center'), item.data.get('zoom'));
+					}
+				});
+
+				collection.events.add('click', function (e) {
+					var target = e.get('target');
+					contacts.setCenter(target.geometry.getCoordinates(), 9, {
+						checkZoomRange: true,
+					});
+				});
+
+				contacts.geoObjects.add(collection);
+				contacts.controls.add(listBox, { float: 'left' });
+			});
 			openModal('.header__buttons-account', 'modal');
 			toggleDropdown('.header__buttons-menu', 'dropdown');
 		</script>
