@@ -123,6 +123,9 @@
 				<div class="modal-container">
 					<button class="modal__close"></button>
 					<div class="catalog__filter-modal">
+						<div class="catalog__filter-desc">
+							<img src="images/profile/filter/main.svg" alt="filter" />фильтры
+						</div>
 						<div class="catalog__filter-toggle">
 							<button
 								class="catalog__filter-toggle_button"
@@ -852,7 +855,7 @@
 							</div>
 							<div class="catalog__mobile-filter">
 								<div class="catalog__mobile-filter_main">
-									<img src="images/profile/filter/main.svg" alt="lower" />
+									<img src="images/profile/filter/main.svg" alt="filter" />
 									<p>фильтры</p>
 								</div>
 								<div class="catalog__mobile-filter_item active">
@@ -933,7 +936,98 @@
 										</tr>
 									</table>
 								</div>
-
+								<div class="catalog__list">
+									<div class="catalog__list-item">
+										<div class="catalog__list-info">
+											<img
+												class="catalog__list-img"
+												src="images/slider-1.png"
+												alt=""
+											/>
+											<div class="catalog__list-desc">
+												<h2 class="catalog__list-title">
+													Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач,
+													автобус)
+												</h2>
+												<div class="catalog__list-count">
+													<p>артикул:</p>
+													<p>548465316</p>
+												</div>
+												<div class="catalog__list-count">
+													<p>кол-во:</p>
+													<p>58</p>
+												</div>
+												<div class="catalog__list-count">
+													<p>цена:</p>
+													<p>4550,80</p>
+												</div>
+											</div>
+										</div>
+										<button class="catalog__list-button">
+											добавить в корзину
+										</button>
+									</div>
+									<div class="catalog__list-item">
+										<div class="catalog__list-info">
+											<img
+												class="catalog__list-img"
+												src="images/slider-1.png"
+												alt=""
+											/>
+											<div class="catalog__list-desc">
+												<h2 class="catalog__list-title">
+													Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач,
+													автобус)
+												</h2>
+												<div class="catalog__list-count">
+													<p>артикул:</p>
+													<p>548465316</p>
+												</div>
+												<div class="catalog__list-count">
+													<p>кол-во:</p>
+													<p>58</p>
+												</div>
+												<div class="catalog__list-count">
+													<p>цена:</p>
+													<p>4550,80</p>
+												</div>
+											</div>
+										</div>
+										<button class="catalog__list-button">
+											добавить в корзину
+										</button>
+									</div>
+									<div class="catalog__list-item">
+										<div class="catalog__list-info">
+											<img
+												class="catalog__list-img"
+												src="images/slider-1.png"
+												alt=""
+											/>
+											<div class="catalog__list-desc">
+												<h2 class="catalog__list-title">
+													Диск колёсный 22.5x9.0, 10x335, ET175, D281 (тягач,
+													автобус)
+												</h2>
+												<div class="catalog__list-count">
+													<p>артикул:</p>
+													<p>548465316</p>
+												</div>
+												<div class="catalog__list-count">
+													<p>кол-во:</p>
+													<p>58</p>
+												</div>
+												<div class="catalog__list-count">
+													<p>цена:</p>
+													<p>4550,80</p>
+												</div>
+											</div>
+										</div>
+										<button class="catalog__list-button">
+											добавить в корзину
+										</button>
+									</div>
+								</div>
 								<div class="catalog__pagination">
 									<button class="catalog__pagination-backward"><</button>
 									<ul class="catalog__pagination-list">
@@ -1055,6 +1149,7 @@
 		<script>
 			openModal('.catalog__mobile-filter_main', 'modal-filter');
 			openModal('.catalog__table-row', 'modal');
+			openModal('.catalog__list-img', 'modal');
 			toggleDropdown('.header__buttons-account', 'dropdown');
 			activateButtons();
 			rangeTooltip();
