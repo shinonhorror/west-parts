@@ -91,32 +91,6 @@ if (document.getElementById('map')) {
 	});
 }
 
-if (document.getElementById('moskowStorage')) {
-	ymaps.ready(function () {
-		new ymaps.Map('moskowStorage', {
-			center: [59.90862, 30.32179],
-			zoom: 16,
-			controls: [],
-		});
-	});
-
-	ymaps.ready(function () {
-		new ymaps.Map('spbStorage', {
-			center: [59.90862, 30.32179],
-			zoom: 16,
-			controls: [],
-		});
-	});
-
-	ymaps.ready(function () {
-		new ymaps.Map('krasnodarStorage', {
-			center: [59.90862, 30.32179],
-			zoom: 16,
-			controls: [],
-		});
-	});
-}
-
 const activeCheckbox = () => {
 	const checkboxes = document.querySelectorAll('.modal__registration-radio');
 	const panels = document.querySelectorAll('.modal__registration-panel');

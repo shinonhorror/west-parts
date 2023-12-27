@@ -6,26 +6,71 @@
 
 .delivery,
 .payment {
-	margin-top: 57px;
+	margin-top: 95px;
 	margin-bottom: 106px;
-	&__inner {
-		display: flex;
-		gap: 109px;
+	&__variants {
+		margin-top: 20px;
+		display: grid;
+		grid-template-columns: auto 300px auto;
+		gap: 40px;
+		&-item {
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+			display: flex;
+			gap: 34px;
+			align-items: center;
+		}
 	}
-	&__image {
-		width: 260px;
-		height: 260px;
+	&__fast {
+		display: flex;
+		gap: 33px;
+		align-items: center;
+		margin-top: 50px;
+		background-color: #fddb8d;
+		padding: 36px 51px;
+		&-img {
+			width: 82px;
+			height: 82px;
+		}
+		&-content {
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+		}
 	}
 	&__about {
 		display: flex;
 		flex-direction: column;
-		gap: 35px;
+		gap: 20px;
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
 		&-title {
-			margin-top: 31px;
-			font-size: 34px;
+			font-size: 24px;
 			font-style: normal;
-			font-weight: 600;
+			font-weight: 500;
 			line-height: 137.9%;
+			border-bottom: 2px solid $yellow;
+			width: fit-content;
+			padding-right: 20px;
+		}
+		&-address {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 160%;
+		}
+		&-city {
+			font-weight: 500;
 		}
 		&-content {
 			font-size: 20px;
@@ -36,28 +81,21 @@
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 	.main {
 		margin-bottom: 100px;
+		margin-top: 32px;
 	}
 
 	.delivery,
 	.payment {
 		margin-top: 0;
 		margin-bottom: 20px;
-		&__inner {
-			display: flex;
-			gap: 50px;
-		}
-		&__image {
-			width: 130px;
-			height: 130px;
+		&__variants {
+			grid-template-columns: auto auto;
 		}
 		&__about {
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
-			&-title {
+			&-title,&-address {
 				font-size: 18px;
 			}
 			&-content {
@@ -67,21 +105,20 @@
 	}
 }
 
-@media screen and (max-width: 450px) {
-	.delivery,
+@media screen and (max-width: 768px) {
 	.payment {
-		&__inner {
-			display: flex;
+		&__variants {
+			grid-template-columns: auto;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.delivery {
+		&__fast {
 			flex-direction: column;
-			gap: 0;
-		}
-		&__image {
-			align-self: center;
-		}
-		&__about {
-			&-title {
-				margin-top: 10px;
-			}
+			justify-content: center;
+			text-align: center;
 		}
 	}
 }
