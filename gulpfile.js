@@ -44,6 +44,7 @@ export function scripts() {
 		.src([
 			'node_modules/choices.js/public/assets/scripts/choices.min.js',
 			'app/js/main.js',
+			'app/js/contacts.js',
 		])
 		.pipe(concat('main.min.js'))
 		.pipe(terser())

@@ -595,6 +595,12 @@
 			font-size: 24px;
 		}
 		&__list {
+			&-title {
+				font-size: 22px;
+			}
+			&-date {
+				font-size: 20px;
+			}
 			&-img {
 				width: 100%;
 				height: 100%;
@@ -617,17 +623,17 @@
 		}
 		&__info {
 			&-title {
-				font-size: 20px;
+				font-size: 22px;
 				font-style: normal;
 				font-weight: 500;
 				line-height: 100%;
 				margin-bottom: 10px;
 			}
 			&-text {
-				font-size: 14px;
+				font-size: 20px;
 			}
 			&-address {
-				font-size: 14px;
+				font-size: 20px;
 			}
 		}
 	}
